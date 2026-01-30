@@ -4,3 +4,4 @@ streamlit
 folium
 beautifulsoup4
 altair<5
+streamlit-folium
