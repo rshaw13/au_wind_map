@@ -102,7 +102,7 @@ df = load_data()
 st.markdown("""
 <style>
 .custom-text {
-    color: #d48149; 
+    color: #31333F; 
     font-size: 35px;
 }
 </style>
@@ -131,10 +131,10 @@ scale = 0.15
 openweathermap_api_key = st.secrets["OPENWEATHERMAP_API_KEY"]
 
 # wind layer
-wind_colour_palette = "0:fcfcfc;10:a9d3df;50:5aabc2"
-
 wind_tiles = (
-    "https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid={openweathermap_api_key}"
+    "https://tile.openweathermap.org/maps/2.0/wind_new/{z}/{x}/{y}.png"
+    f"?appid={openweathermap_api_key}"
+    f"&fill_bound=true"
 )
 
 folium.raster_layers.TileLayer(
@@ -194,17 +194,8 @@ map_data = st_folium(
     key="wind_map",
 )
 
-st.caption(f"Last update (UTC): {df['timestamp_utc'].iloc[0]}")
 
-st.markdown("""
-<style>
-.custom-text {
-    color: #d48149; 
-    font-size: 35px;
-}
-</style>
-<p class="custom-text"><strong>Selected Wind Farm Details</strong></p>
-""", unsafe_allow_html=True)
+st.caption(f"Last update (UTC): {df['timestamp_utc'].iloc[0]}")
 
 
 # selection-specific farm data table
@@ -216,10 +207,9 @@ table_df = pd.DataFrame([{
     "Utilisation (%)": float(round(selected_row["utilisation_pct"], 0)),
     "Last Update (UTC)": str(selected_row["timestamp_utc"]),
 }])
+
+# forcing as object dtype then making bare html for streamlit
 table_df = table_df.astype(object)
-
-st.table(table_df)
-
 table_html = table_df.to_html(index=False, classes='custom-table')
 
 st.markdown(
