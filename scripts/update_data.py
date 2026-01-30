@@ -4,10 +4,11 @@ import zipfile
 import io
 from datetime import datetime
 from bs4 import BeautifulSoup
+from urllib.parse import urljoin
 
 
 # ---------------- CONFIG ----------------
-SCADA_BASE_URL = "https://www.nemweb.com.au/REPORTS/CURRENT/Dispatch_SCADA/"
+SCADA_INDEX_URL = "https://www.nemweb.com.au/REPORTS/CURRENT/Dispatch_SCADA/"
 
 CAPACITY_FILE = "Full NEM Plant Registration.csv"
 COORDS_FILE = "Clean Coords.csv"
@@ -16,24 +17,28 @@ OUTPUT_FILE = "data/latest_wind_data.csv"
 # ----------------------------------------
 
 def get_latest_scada_url() -> str:
-    r = requests.get(SCADA_BASE_URL, timeout=30)
+    r = requests.get(SCADA_INDEX_URL, timeout=30)
     r.raise_for_status()
 
     soup = BeautifulSoup(r.text, "html.parser")
 
-    zip_files = [
+    zip_links = [
         a["href"]
         for a in soup.find_all("a", href=True)
-        if a["href"].endswith(".zip")
+        if "PUBLIC_DISPATCHSCADA" in a["href"] and a["href"].endswith(".zip")
     ]
 
-    if not zip_files:
-        raise RuntimeError("No SCADA zip files found")
+    if not zip_links:
+        raise RuntimeError("No Dispatch_SCADA zip files found")
 
-    zip_files.sort(reverse=True)  # newest first
-    latest = zip_files[0]
+    zip_links.sort(reverse=True)
 
-    return SCADA_BASE_URL + latest
+    # urljoin safely handles absolute vs relative paths
+    latest_url = urljoin(SCADA_INDEX_URL, zip_links[0])
+
+    return latest_url
+
+
 def get_latest_scada(zip_url: str) -> pd.DataFrame:
     r = requests.get(zip_url, timeout=30)
     r.raise_for_status()
