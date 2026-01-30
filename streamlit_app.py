@@ -37,7 +37,7 @@ for _, row in df.iterrows():
         fill_opacity=0.5,
         fill_color="green" if row["utilisation_pct"] > 50 else "red",
         stroke=False,
-        tooltip=folium.Tooltip(tooltip_text),
+        tooltip=tooltip_text,
     ).add_to(m)
 
     folium.CircleMarker(
