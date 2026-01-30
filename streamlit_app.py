@@ -24,10 +24,10 @@ scale = 0.15
 
 for _, row in df.iterrows():
 
-    tooltip_text = (
-    f"{row['Station Name']}<br>"
-    f"{row['SCADAVALUE']} MW / {row['REG_CAP']} MW<br>"
-    f"{row['utilisation_pct']}%"
+    popup_text = (
+        f"{row['Station Name']}<br>"
+        f"{row['SCADAVALUE']} MW / {row['REG_CAP']} MW<br>"
+        f"{row['utilisation_pct']}%"
     )
 
     folium.CircleMarker(
@@ -37,7 +37,7 @@ for _, row in df.iterrows():
         fill_opacity=0.5,
         fill_color="green" if row["utilisation_pct"] > 50 else "red",
         stroke=False,
-        tooltip=tooltip_text,
+        popup=popup_text,  # <-- use popup string instead of tooltip object
     ).add_to(m)
 
     folium.CircleMarker(
