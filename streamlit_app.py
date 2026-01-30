@@ -55,7 +55,7 @@ st.markdown(
     }
 
     .custom-text {
-        color: #31333F; 
+        color: #0a0a0a;
         font-size: 35px;
         font-weight: bold;
         margin-top: 20px;
