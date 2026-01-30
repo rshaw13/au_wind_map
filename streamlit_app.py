@@ -6,7 +6,7 @@ from streamlit_folium import st_folium
 # styling
 st.set_page_config(layout="wide")
 
-st.title("Australian Wind Farm Output")
+# st.title("Australian Wind Farm Output")
 
 st.markdown(
     """
@@ -17,7 +17,7 @@ st.markdown(
 
     /* Hero banner */
     .hero {
-        background-image: url("https://esdnews.com.au/wp-content/uploads/2023/08/Palmer-Wind-Farm-SA.jpg");
+        background-image: url("https://esdnews.com.au/wp-content/uploads/2020/11/windfarm.jpg");
         background-size: cover;
         background-position: center;
         padding: 90px 40px;
@@ -53,12 +53,10 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.image(
-    "https://esdnews.com.au/wp-content/uploads/2023/08/Palmer-Wind-Farm-SA.jpg",
-    use_column_width=True
-)
-
-
+# st.image(
+#    "https://esdnews.com.au/wp-content/uploads/2020/11/windfarm.jpg",
+#    use_column_width=True
+# )
 
 # loading DATA
 
@@ -161,14 +159,17 @@ map_data = st_folium(
 st.markdown("### Selected wind farm")
 
 table_df = pd.DataFrame([{
-    "Wind Farm": selected_row["Station Name"],
-    "Output (MW)": selected_row["SCADAVALUE"],
-    "Capacity (MW)": selected_row["REG_CAP"],
-    "Utilisation (%)": round(selected_row["utilisation_pct"], 1),
-    "Last Update (UTC)": selected_row["timestamp_utc"],
+    "Wind Farm": str(selected_row["Station Name"]),
+    "Output (MW)": float(selected_row["SCADAVALUE"]),
+    "Capacity (MW)": float(selected_row["REG_CAP"]),
+    "Utilisation (%)": float(round(selected_row["utilisation_pct"], 1)),
+    "Last Update (UTC)": str(selected_row["timestamp_utc"]),
 }])
 
-st.dataframe(
-    table_df,
-    use_container_width=True,
-)
+# Force Arrow-safe dtypes
+table_df = table_df.astype({
+    "Wind Farm": "string",
+    "Last Update (UTC)": "string"
+})
+
+st.table(table_df)
