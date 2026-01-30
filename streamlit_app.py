@@ -33,30 +33,44 @@ st.markdown(
         text-align: center;
         background-size: cover;
         background-position: center;
+        box-shadow: 2px 4px 14px 5px rgba(86,47,20,0.39);
     }
 
     .hero h1 {
         color: #EFD0BB;
-        font-family: 'Cormorant Garamond', serif;
+        font-family: 'Garamond', serif;
         font-weight: 700;
         font-size: 4rem; 
         margin: 0;
-        box-shadow: 2px 4px 14px 5px rgba(86,47,20,0.39);
+        text-shadow: 2px 4px 14px 5px rgba(86,47,20,0.39);
     }
 
-    /* Content box for table and seleciton box */
+    /* container formatting */
     [data-testid="stVerticalBlockBorderWrapper"] {
-        background-color: white;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
+        background-color: white !important;
+        padding: 20px !important;
+        border-radius: 15px !important;
+        border: none !important; /* Removes the default thin grey line */
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2) !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* text inside the white boxes is dark and readable */
+    [data-testid="stVerticalBlockBorderWrapper"] p, 
+    [data-testid="stVerticalBlockBorderWrapper"] h3,
+    [data-testid="stVerticalBlockBorderWrapper"] label {
+        color: #31333F !important;
+    }
+
+    /* table background inside the box */
+    [data-testid="stVerticalBlockBorderWrapper"] .stTable {
+        background-color: white !important;
     }
 
     /* Remove padding from Streamlit containers to make boxes look better */
-    [data-testid="stVerticalBlock"] > div:has(div.content-box) {
-        padding: 0;
-    }
+    /*[data-testid="stVerticalBlock"] > div:has(div.content-box) */
+    /*    padding: 0; */
+    /* } */
 
     </style>
     """,
@@ -180,8 +194,8 @@ for _, row in df.iterrows():
 # render map
 map_data = st_folium(
     m,
-    width=1700,
-    height=800,
+    width=1900,
+    height=1000,
     key="wind_map",
 )
 
