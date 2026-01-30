@@ -15,37 +15,30 @@ st.markdown(
         font-family: "Inter", sans-serif;
     }
 
-    .full-width-bg {
-        background-image: url("https://esdnews.com.au/wp-content/uploads/2020/11/windfarm.jpg");
-        background-size: cover;   /* This is the key: it scales the image to cover the entire container while maintaining aspect ratio, cropping as needed */
-        background-position: center; /* Centers the image */
-        width: 100%;
-        height: 400px;            /* You must define a height for background elements */
-    }
-
     /* Hero banner */
     .hero {
         background-image: url("https://esdnews.com.au/wp-content/uploads/2020/11/windfarm.jpg");
         background-size: cover;
         background-position: center;
-        padding: 90px 40px;
-        border-radius: 12px;
+        */ padding: 90px 40px;
+        */ border-radius: 12px;
         margin-bottom: 25px;
     }
 
     .hero h1 {
         color: white;
-        font-family: "Inter", sans-serif
+        font-family: "Garamond", sans-serif;
+        font-weight: bold;
     }
 
     /* Table styling */
     [data-testid="stDataFrame"] thead tr th {
-        background-color: #e6f2ff;
+        background-color: ##67a4e6;
         color: black;
     }
 
     [data-testid="stDataFrame"] tbody tr {
-        background-color: white;
+        background-color: #d9eafc;
     }
     </style>
     """,
@@ -175,6 +168,6 @@ table_df = pd.DataFrame([{
     "Last Update (UTC)": selected_row["timestamp_utc"].astype(str),
 }])
 
-# table_df = table_df.astype(object)
+table_df = table_df.astype(object)
 
 st.table(table_df)
