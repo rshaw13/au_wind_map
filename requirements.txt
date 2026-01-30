@@ -4,4 +4,4 @@ streamlit
 folium
 beautifulsoup4
 altair<5
-streamlit-folium
+streamlit-folium==0.11.0
