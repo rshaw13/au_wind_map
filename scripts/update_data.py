@@ -89,6 +89,9 @@ def main():
     print("Merging datasets...")
     final = build_wind_dataset(scada)
 
+    # Ensure data directory exists
+    Path("data").mkdir(parents=True, exist_ok=True)
+
     final.to_csv(OUTPUT_FILE, index=False)
     print(f"Saved {len(final)} rows → {OUTPUT_FILE}")
 
