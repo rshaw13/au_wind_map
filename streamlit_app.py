@@ -21,7 +21,7 @@ st.markdown(
     .stApp {
         background: 
             linear-gradient(to bottom, #8cb2d9 0%, #8cb2d9 40%, rgba(140, 178, 217, 0) 80%),
-            url("https://upload.wikimedia.org");
+            url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Emu_downs_Gnangarra-1.jpg/500px-Emu_downs_Gnangarra-1.jpg");
         background-color: #8cb2d9;
         background-repeat: no-repeat;
         background-position: bottom center;
@@ -42,22 +42,28 @@ st.markdown(
     }
 
     .hero h1 {
-        color: fc214c;
+        color: #fc214c;
         font-family: 'Cormorant Garamond', serif;
         font-weight: 700;
         font-size: 4rem; 
         margin: 0;
     }
 
-    /* White box for content beneath the map */
+    /* Content box for table and seleciton box */
     .content-box {
         background-color: white;
-        padding: 30px;
+        padding: 25px;
         border-radius: 15px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         margin-top: 20px;
         color: #31333F;
     }
+
+    /* Remove padding from Streamlit containers to make boxes look better */
+    [data-testid="stVerticalBlock"] > div:has(div.content-box) {
+        padding: 0;
+    }
+
     </style>
     """,
     unsafe_allow_html=True
@@ -83,14 +89,14 @@ def load_data():
     return pd.read_csv(DATA_URL)
 
 df = load_data()
-st.caption(f"Last update (UTC): {df['timestamp_utc'].iloc[0]}")
 
 # wind farm selector
-
+st.markdown('<div class="content-box">', unsafe_allow_html=True)
 selected_name = st.selectbox(
     "Select a wind farm for output information",
     df["Station Name"].sort_values().unique()
 )
+st.markdown('</div>', unsafe_allow_html=True)
 
 selected_row = df[df["Station Name"] == selected_name].iloc[0]
 
@@ -109,7 +115,7 @@ scale = 0.15
 openweathermap_api_key = st.secrets["OPENWEATHERMAP_API_KEY"]
 
 # wind layer
-wind_colour_palette = "0:fcfcfc;10:a9d3df;50:5aabc2"
+wind_colour_palette = "0:#fcfcfc;10:#a9d3df;50:#5aabc2"
 
 wind_tiles = (
     "https://tile.openweathermap.org{z}/{x}/{y}.png"
@@ -174,24 +180,22 @@ map_data = st_folium(
     key="wind_map",
 )
 
+st.caption(f"Last update (UTC): {df['timestamp_utc'].iloc[0]}")
+
 
 # Wrap everything below the map in a div with the 'content-box' class
 st.markdown('<div class="content-box">', unsafe_allow_html=True)
-
-st.write("### Selected Wind Farm Details")
+st.markdown("### Selected Wind Farm Details")
 
 # selection-specific farm data table
-st.markdown("### Selected wind farm")
-
 table_df = pd.DataFrame([{
     "Wind Farm": str(selected_row["Station Name"]),
     "DUID": str(selected_row["DUID"]),
-    "Output (MW)": float(selected_row["SCADAVALUE"]),
-    "Capacity (MW)": float(selected_row["REG_CAP"]),
-    "Utilisation (%)": float(round(selected_row["utilisation_pct"], 1)),
+    "Output (MW)": float(round(selected_row["SCADAVALUE"],1)),
+    "Capacity (MW)": float(round(selected_row["REG_CAP"],1)),
+    "Utilisation (%)": float(round(selected_row["utilisation_pct"], 0)),
     "Last Update (UTC)": str(selected_row["timestamp_utc"]),
 }])
-
 table_df = table_df.astype(object)
 
 st.table(table_df)
