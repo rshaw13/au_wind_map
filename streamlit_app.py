@@ -8,7 +8,7 @@ DATA_URL = (
 )
 
 st.set_page_config(layout="wide")
-st.title("🇦🇺 Australian Wind Farm Output")
+st.title("Australian Wind Farm Output")
 
 @st.cache_data(ttl=300)
 def load_data():
@@ -37,7 +37,7 @@ for _, row in df.iterrows():
         fill_opacity=0.5,
         fill_color="green" if row["utilisation_pct"] > 50 else "red",
         stroke=False,
-        popup=popup_text,  # <-- use popup string instead of tooltip object
+        popup=popup_text, 
     ).add_to(m)
 
     folium.CircleMarker(
@@ -48,4 +48,4 @@ for _, row in df.iterrows():
         fill=False,
     ).add_to(m)
 
-st_folium(m, width=1400, height=700, key="wind_map", returned_objects=[])
+st_folium(m._repr_html_(), width=1400, height=700)
