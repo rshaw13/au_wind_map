@@ -1,7 +1,7 @@
-pandas
+pandas==2.1.1
 requests
-streamlit
-folium
+streamlit==1.26.0
+folium==0.18.3
 beautifulsoup4
 altair<5
-streamlit-folium
+streamlit-folium==0.11.2
