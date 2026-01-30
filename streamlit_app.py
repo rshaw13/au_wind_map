@@ -48,4 +48,4 @@ for _, row in df.iterrows():
         fill=False,
     ).add_to(m)
 
-st_folium(m, width=1400, height=700, on_change=None)
+st_folium(m, width=1400, height=700, key="wind_map")
