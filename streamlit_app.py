@@ -54,7 +54,7 @@ st.markdown(
         color: #31333F !important;
     }
     
-    /* Style the HTML table to look like Streamlit's */
+  /* Style the HTML table to look like Streamlit's */
     .custom-table {
         width: 100%;
         border-collapse: collapse;
@@ -62,15 +62,16 @@ st.markdown(
     }
     .custom-table th {
         text-align: left;
-        padding: 8px;
+        padding: 12px 8px;
+        background-color: #e1a983;
+        color: black;
         border-bottom: 2px solid #f0f2f6;
-        color: #6d7280;
     }
     .custom-table td {
         padding: 12px 8px;
         border-bottom: 1px solid #f0f2f6;
+        color: #31333F;
     }
-
     </style>
     """,
     unsafe_allow_html=True
@@ -79,7 +80,7 @@ st.markdown(
 st.markdown(
     """
     <div class="hero">
-        <h1>Australian Wind Farm Output</h1>
+        <h1>Australian Wind Farm Output Map</h1>
     </div>
     """,
     unsafe_allow_html=True
@@ -109,9 +110,7 @@ st.markdown("""
 <p class="custom-text"><strong>Windfarm Output Map</strong></p>
 """, unsafe_allow_html=True)
 
-
 # wind farm selector
-st.markdown('<div class="content-card">', unsafe_allow_html=True)
 selected_name = st.selectbox(
     "Select a wind farm for output information",
     df["Station Name"].sort_values().unique()
@@ -132,7 +131,7 @@ openweathermap_api_key = st.secrets["OPENWEATHERMAP_API_KEY"]
 
 # wind layer
 wind_tiles = (
-    "https://tile.openweathermap.org/maps/2.0/wind_new/{z}/{x}/{y}.png"
+    "https://tile.openweathermap.org/maps/wind_new/{z}/{x}/{y}.png"
     f"?appid={openweathermap_api_key}"
     f"&fill_bound=true"
 )
