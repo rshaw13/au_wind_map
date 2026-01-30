@@ -15,6 +15,14 @@ st.markdown(
         font-family: "Inter", sans-serif;
     }
 
+    .full-width-bg {
+        background-image: url("https://esdnews.com.au/wp-content/uploads/2020/11/windfarm.jpg");
+        background-size: cover;   /* This is the key: it scales the image to cover the entire container while maintaining aspect ratio, cropping as needed */
+        background-position: center; /* Centers the image */
+        width: 100%;
+        height: 400px;            /* You must define a height for background elements */
+    }
+
     /* Hero banner */
     .hero {
         background-image: url("https://esdnews.com.au/wp-content/uploads/2020/11/windfarm.jpg");
@@ -27,7 +35,7 @@ st.markdown(
 
     .hero h1 {
         color: white;
-        text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+        font-family: "Inter", sans-serif
     }
 
     /* Table styling */
@@ -125,7 +133,7 @@ for _, row in df.iterrows():
         location=[row["Latitude"], row["Longitude"]],
         radius=row["SCADAVALUE"] * scale,
         fill=True,
-        fill_opacity=0.8 if is_selected else 0.5,
+        fill_opacity=0.5,
         fill_color="blue" if is_selected else (
             "green" if row["utilisation_pct"] > 50 else "red"
         ),
@@ -141,13 +149,13 @@ for _, row in df.iterrows():
         color="gray",
         weight=1,
         fill=True,
-        fill_opacity=0,
-        fill_color="green",
+        fill_opacity=0.2 if is_selected else 0,
+        fill_color="blue",
         tooltip=row['Station Name'],
         popup=popup_text,
     ).add_to(m)
 
-# render map and capture clicks
+# render map
 map_data = st_folium(
     m,
     width=1400,
@@ -168,8 +176,8 @@ table_df = pd.DataFrame([{
 
 # Force Arrow-safe dtypes
 table_df = table_df.astype({
-    "Wind Farm": "string",
-    "Last Update (UTC)": "string"
+    "Wind Farm": "object",
+    "Last Update (UTC)": "object"
 })
 
 st.table(table_df)
