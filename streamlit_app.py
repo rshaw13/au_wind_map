@@ -17,10 +17,10 @@ st.markdown(
         font-family: "Inter", sans-serif !important;
     }
 
-    /* Updated Background Gradient */
+    /* Background Gradient */
     .stApp {
-        background: #449FBA;
-        background: linear-gradient(180deg, rgba(68, 159, 186, 1) 24%, rgba(255, 133, 51, 1) 100%) !important;
+        background: RGBA(68, 159, 186, 1);
+        background: linear-gradient(180deg, rgba(68, 159, 186, 0.9) 7%, rgba(239, 208, 187, 0.9) 86%);
         background-attachment: fixed;
     }
 
@@ -85,7 +85,7 @@ def load_data():
 df = load_data()
 
 # wind farm selector
-with st.container(border=True):
+with st.container():
     selected_name = st.selectbox(
         "Select a wind farm for output information",
         df["Station Name"].sort_values().unique()
@@ -95,7 +95,7 @@ selected_row = df[df["Station Name"] == selected_name].iloc[0]
 
 
 # setting up folium map
-with st.container(border=True):
+with st.container():
     st.write("### Windfarm Output Map")
     st.write('<p>Windfarm Output Map</p>', unsafe_allow_html=True)
     st.markdown("""
@@ -187,7 +187,7 @@ st.caption(f"Last update (UTC): {df['timestamp_utc'].iloc[0]}")
 
 
 # Wrap everything below the map in a div with the 'content-box' class
-with st.container(border=True):
+with st.container():
     st.markdown("### Selected Wind Farm Details")
 
     # selection-specific farm data table
