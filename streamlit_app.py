@@ -13,8 +13,8 @@ st.markdown(
     @import url('https://fonts.googleapis.com');
 
     /* Global Font */
-    html, body, [class*="css"], p, label, .stSelectbox {
-        font-family: "Inter", sans-serif !important;
+    .stMarkdown, p, label, .stSelectbox {
+            font-family: "Inter", sans-serif !important;
     }
 
     /* Background Gradient */
@@ -46,25 +46,13 @@ st.markdown(
     }
 
     /* container formatting */
-    [data-testid="stVerticalBlockBorderWrapper"] {
+    .white-card {
         background-color: white !important;
-        padding: 20px !important;
+        padding: 30px !important;
         border-radius: 15px !important;
-        border: none !important; /* Removes the default thin grey line */
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2) !important;
-        margin-bottom: 20px !important;
-    }
-
-    /* text inside the white boxes is dark and readable */
-    [data-testid="stVerticalBlockBorderWrapper"] p, 
-    [data-testid="stVerticalBlockBorderWrapper"] h3,
-    [data-testid="stVerticalBlockBorderWrapper"] label {
+        margin-bottom: 25px !important;
         color: #31333F !important;
-    }
-
-    /* table background inside the box */
-    [data-testid="stVerticalBlockBorderWrapper"] .stTable {
-        background-color: white !important;
     }
 
     /* Remove padding from Streamlit containers to make boxes look better */
@@ -100,24 +88,24 @@ df = load_data()
 
 
 # title for map section
-with st.container(border=True):
-    st.markdown("""
-    <style>
-    .custom-text {
-        color: #ad5e28; 
-        font-size: 35px;
-    }
-    </style>
-    <p class="custom-text"><strong>Windfarm Output Map</strong></p>
-    """, unsafe_allow_html=True)
+st.markdown("""
+<style>
+.custom-text {
+    color: #ad5e28; 
+    font-size: 35px;
+}
+</style>
+<p class="custom-text"><strong>Windfarm Output Map</strong></p>
+""", unsafe_allow_html=True)
 
 
 # wind farm selector
-with st.container(border=True):
-    selected_name = st.selectbox(
-        "Select a wind farm for output information",
-        df["Station Name"].sort_values().unique()
-    )
+st.markdown('<div class="white-card">', unsafe_allow_html=True)
+selected_name = st.selectbox(
+    "Select a wind farm for output information",
+    df["Station Name"].sort_values().unique()
+)
+st.markdown('</div>', unsafe_allow_html=True)
 
 selected_row = df[df["Station Name"] == selected_name].iloc[0]
 
@@ -204,18 +192,20 @@ st.caption(f"Last update (UTC): {df['timestamp_utc'].iloc[0]}")
 
 
 # Wrap everything below the map in a div with the 'content-box' class
-with st.container(border=True):
-    st.markdown("### Selected Wind Farm Details")
+st.markdown('<div class="white-card">', unsafe_allow_html=True)
+st.markdown("### Selected Wind Farm Details")
 
-    # selection-specific farm data table
-    table_df = pd.DataFrame([{
-        "Wind Farm": str(selected_row["Station Name"]),
-        "DUID": str(selected_row["DUID"]),
-        "Output (MW)": float(round(selected_row["SCADAVALUE"],1)),
-        "Capacity (MW)": float(round(selected_row["REG_CAP"],1)),
-        "Utilisation (%)": float(round(selected_row["utilisation_pct"], 0)),
-        "Last Update (UTC)": str(selected_row["timestamp_utc"]),
-    }])
-    table_df = table_df.astype(object)
+# selection-specific farm data table
+table_df = pd.DataFrame([{
+    "Wind Farm": str(selected_row["Station Name"]),
+    "DUID": str(selected_row["DUID"]),
+    "Output (MW)": float(round(selected_row["SCADAVALUE"],1)),
+    "Capacity (MW)": float(round(selected_row["REG_CAP"],1)),
+    "Utilisation (%)": float(round(selected_row["utilisation_pct"], 0)),
+    "Last Update (UTC)": str(selected_row["timestamp_utc"]),
+}])
+table_df = table_df.astype(object)
 
-    st.table(table_df)
+st.markdown('</div>', unsafe_allow_html=True)
+
+st.table(table_df)
