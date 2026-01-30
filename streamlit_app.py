@@ -13,19 +13,14 @@ st.markdown(
     @import url('https://fonts.googleapis.com');
 
     /* Global Font */
-    html, body, [class*="css"] {
-        font-family: "Inter", sans-serif;
+    html, body, [class*="css"], p, label, .stSelectbox {
+        font-family: "Inter", sans-serif !important;
     }
 
-    /* Background with Edge-to-Edge Image */
+    /* Updated Background Gradient */
     .stApp {
-        background: 
-            linear-gradient(to bottom, #8cb2d9 0%, #8cb2d9 40%, rgba(140, 178, 217, 0) 80%),
-            url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Emu_downs_Gnangarra-1.jpg/500px-Emu_downs_Gnangarra-1.jpg");
-        background-color: #8cb2d9;
-        background-repeat: no-repeat;
-        background-position: bottom center;
-        background-size: 100% auto; /* Forces edges to touch the window width */
+        background: #449FBA;
+        background: linear-gradient(180deg, rgba(68, 159, 186, 1) 24%, rgba(255, 133, 51, 1) 100%) !important;
         background-attachment: fixed;
     }
 
@@ -50,13 +45,12 @@ st.markdown(
     }
 
     /* Content box for table and seleciton box */
-    .content-box {
+    [data-testid="stVerticalBlockBorderWrapper"] {
         background-color: white;
-        padding: 25px;
-        border-radius: 15px;
+        padding: 20px;
+        border-radius: 5px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
-        color: #31333F;
+        margin-bottom: 20px;
     }
 
     /* Remove padding from Streamlit containers to make boxes look better */
@@ -91,19 +85,28 @@ def load_data():
 df = load_data()
 
 # wind farm selector
-st.markdown('<div class="content-box">', unsafe_allow_html=True)
-selected_name = st.selectbox(
-    "Select a wind farm for output information",
-    df["Station Name"].sort_values().unique()
-)
-st.markdown('</div>', unsafe_allow_html=True)
+with st.container(border=True):
+    selected_name = st.selectbox(
+        "Select a wind farm for output information",
+        df["Station Name"].sort_values().unique()
+    )
 
 selected_row = df[df["Station Name"] == selected_name].iloc[0]
 
 
 # setting up folium map
-
-st.write("### Windfarm Output Map")
+with st.container(border=True):
+    st.write("### Windfarm Output Map")
+    st.write('<p>Windfarm Output Map</p>', unsafe_allow_html=True)
+    st.markdown("""
+    <style>
+    .custom-text {
+        color: #FC0C3B; /* Using a hex code */
+        font-size: 20px;
+    }
+    </style>
+    <p class="custom-text">This text uses a custom CSS class.</p>
+    """, unsafe_allow_html=True)
 
 m = folium.Map(
     location=[-30, 145],
@@ -184,19 +187,18 @@ st.caption(f"Last update (UTC): {df['timestamp_utc'].iloc[0]}")
 
 
 # Wrap everything below the map in a div with the 'content-box' class
-st.markdown('<div class="content-box">', unsafe_allow_html=True)
-st.markdown("### Selected Wind Farm Details")
+with st.container(border=True):
+    st.markdown("### Selected Wind Farm Details")
 
-# selection-specific farm data table
-table_df = pd.DataFrame([{
-    "Wind Farm": str(selected_row["Station Name"]),
-    "DUID": str(selected_row["DUID"]),
-    "Output (MW)": float(round(selected_row["SCADAVALUE"],1)),
-    "Capacity (MW)": float(round(selected_row["REG_CAP"],1)),
-    "Utilisation (%)": float(round(selected_row["utilisation_pct"], 0)),
-    "Last Update (UTC)": str(selected_row["timestamp_utc"]),
-}])
-table_df = table_df.astype(object)
+    # selection-specific farm data table
+    table_df = pd.DataFrame([{
+        "Wind Farm": str(selected_row["Station Name"]),
+        "DUID": str(selected_row["DUID"]),
+        "Output (MW)": float(round(selected_row["SCADAVALUE"],1)),
+        "Capacity (MW)": float(round(selected_row["REG_CAP"],1)),
+        "Utilisation (%)": float(round(selected_row["utilisation_pct"], 0)),
+        "Last Update (UTC)": str(selected_row["timestamp_utc"]),
+    }])
+    table_df = table_df.astype(object)
 
-st.table(table_df)
-st.markdown('</div>', unsafe_allow_html=True)
+    st.table(table_df)
