@@ -103,14 +103,14 @@ df = load_data()
 st.markdown(
     """
     <div class="hero">
-        <h1>Australian Wind Power Plant Output Map</h1>
+        <h1>Australian Windfarm Output Map</h1>
     </div>
     """,
     unsafe_allow_html=True
 )
 st.markdown(
     f'<div style="margin-left: 50px;">'
-    f'An energy project by Ryan Shaw.  Contact me on LinkedIn.'
+    f'An energy project by Ryan Shaw.'
     f'</div>', 
     unsafe_allow_html=True
 )
@@ -121,16 +121,17 @@ st.markdown(
     f"""
     <div style="
         display: flex; 
-        align-items: right; 
+        align-items: center; 
+        justify-content: flex-end; /* Aligns content to the right edge */
         gap: 10px; 
-        margin-left: 250px; 
+        margin-bottom: 10px; /* Added spacing below the element */
         font-family: 'Inter', sans-serif;
         color: #6d7280;
         font-size: 0.85rem;
     ">
-        <span>Last update (UTC): {df['timestamp_utc'].iloc[0]}</span>
+        <span>Contact me on LinkedIn</span>
         <a href="{linkedin_url}" target="_blank" style="text-decoration: none; display: flex; align-items: center;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/250px-LinkedIn_icon.svg.png" width="18px" height="18px">
+            <img src="https://upload.wikimedia.org" width="18px" height="18px">
         </a>
     </div>
     """,
@@ -145,7 +146,7 @@ st.markdown("""
     font-size: 35px;
 }
 </style>
-<p class="custom-text"><strong>Current Output Map</strong></p>
+<p class="custom-text"><strong>Current Plant Output Map</strong></p>
 """, unsafe_allow_html=True)
 
 # wind farm selector
