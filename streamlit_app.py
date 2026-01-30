@@ -18,6 +18,19 @@ st.markdown(
         font-family: "Inter", sans-serif;
     }
 
+    .stApp {
+        background: 
+            linear-gradient(to bottom, #8cb2d9 0%, #8cb2d9 50%, rgba(140, 178, 217, 0) 100%),
+            url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Emu_downs_Gnangarra-1.jpg/500px-Emu_downs_Gnangarra-1.jpg");
+        
+        background-color: #8cb2d9;
+        
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: contain;
+        background-attachment: fixed;
+    }
+
     /* Hero banner */
     .hero {
         background-image: url("https://esdnews.com.au");
@@ -31,19 +44,10 @@ st.markdown(
     .hero h1 {
         color: #fc214c;
         font-family: 'Cormorant Garamond', serif;
-        font-weight: bold;
-        font-size: 3rem; 
+        font-weight: 1000;
+        font-size: 4rem; 
     }
 
-    /* Table styling */
-    [data-testid="stDataFrame"] thead tr th {
-        background-color: #67a4e6;
-        color: black;
-    }
-
-    [data-testid="stDataFrame"] tbody tr {
-        background-color: #5aabc2;
-    }
     </style>
     """,
     unsafe_allow_html=True
