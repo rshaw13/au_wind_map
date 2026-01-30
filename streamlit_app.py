@@ -53,6 +53,13 @@ st.markdown(
         margin-bottom: 20px;
         color: #31333F !important;
     }
+
+    .custom-text {
+        color: #31333F; 
+        font-size: 35px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
     
   /* Style the HTML table to look like Streamlit's */
     .custom-table {
@@ -110,24 +117,14 @@ st.markdown(
 )
 
 linkedin_url = "https://www.linkedin.com/in/ryan-shaw13/"
-
 st.markdown(
     f"""
-    <div style="
-        display: flex; 
-        justify-content: space-between;
-        align-items: center; 
-        margin-bottom: 10px;
-        font-family: 'Inter', sans-serif;
-        color: #6d7280;
-        font-size: 0.85rem;
-    ">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; color: #6d7280; font-size: 0.85rem;">
         <div>An energy project by Ryan Shaw.</div>
-
         <div style="display: flex; align-items: center; gap: 10px;">
             <span>Contact me on LinkedIn: </span>
-            <a href="{linkedin_url}" target="_blank" style="text-decoration: none; display: flex; align-items: center;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/250px-LinkedIn_icon.svg.png" width="18px" height="18px">
+            <a href="{linkedin_url}" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/250px-LinkedIn_icon.svg.png" width="18px">
             </a>
         </div>
     </div>
@@ -141,7 +138,6 @@ st.markdown("""
 .custom-text {
     color: #31333F; 
     font-size: 35px;
-    text-shadow: 2px 4px 14px 5px rgba(86,47,20,0.39);
 }
 </style>
 <p class="custom-text"><strong>Current Plant Output Map</strong></p>
