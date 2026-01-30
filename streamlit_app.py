@@ -6,48 +6,58 @@ from streamlit_folium import st_folium
 # styling
 st.set_page_config(layout="wide")
 
-# st.title("Australian Wind Farm Output")
-
 st.markdown(
     """
     <style>
- */
+    /* Import font correctly */
     @import url('https://fonts.googleapis.com');
 
+    /* Global Font */
     html, body, [class*="css"] {
         font-family: "Inter", sans-serif;
     }
 
+    /* Background with Edge-to-Edge Image */
     .stApp {
         background: 
-            linear-gradient(to bottom, #8cb2d9 0%, #8cb2d9 50%, rgba(140, 178, 217, 0) 100%),
-            url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Emu_downs_Gnangarra-1.jpg/500px-Emu_downs_Gnangarra-1.jpg");
-        
+            linear-gradient(to bottom, #8cb2d9 0%, #8cb2d9 40%, rgba(140, 178, 217, 0) 80%),
+            url("https://upload.wikimedia.org");
         background-color: #8cb2d9;
-        
         background-repeat: no-repeat;
         background-position: bottom center;
-        background-size: contain;
+        background-size: 100% auto; /* Forces edges to touch the window width */
         background-attachment: fixed;
     }
 
-    /* Hero banner */
+    /* Hero banner - fixed URL and height */
     .hero {
-        background-image: url("https://esdnews.com.au");
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                          url("https://www.arup.com/globalassets/images/projects/a/australis-energy-offshore-wind-farm/australis-offshore-windfarms-cgetty-2000x1125.jpg");
         background-size: cover;
         background-position: center;
-        padding: 90px 40px;
+        padding: 60px 40px;
         border-radius: 12px;
         margin-bottom: 25px;
+        text-align: center;
     }
 
     .hero h1 {
-        color: #fc214c;
+        color: fc214c;
         font-family: 'Cormorant Garamond', serif;
-        font-weight: 1000;
+        font-weight: 700;
         font-size: 4rem; 
+        margin: 0;
     }
 
+    /* White box for content beneath the map */
+    .content-box {
+        background-color: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        color: #31333F;
+    }
     </style>
     """,
     unsafe_allow_html=True
@@ -61,12 +71,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-
-# st.image(
-#    "https://esdnews.com.au/wp-content/uploads/2020/11/windfarm.jpg",
-#    use_column_width=True
-# )
 
 # loading DATA
 
@@ -90,7 +94,10 @@ selected_name = st.selectbox(
 
 selected_row = df[df["Station Name"] == selected_name].iloc[0]
 
+
 # setting up folium map
+
+st.write("### Windfarm Output Map")
 
 m = folium.Map(
     location=[-30, 145],
@@ -167,9 +174,14 @@ map_data = st_folium(
     key="wind_map",
 )
 
+
+# Wrap everything below the map in a div with the 'content-box' class
+st.markdown('<div class="content-box">', unsafe_allow_html=True)
+
+st.write("### Selected Wind Farm Details")
+
 # selection-specific farm data table
 st.markdown("### Selected wind farm")
-
 
 table_df = pd.DataFrame([{
     "Wind Farm": str(selected_row["Station Name"]),
@@ -183,3 +195,4 @@ table_df = pd.DataFrame([{
 table_df = table_df.astype(object)
 
 st.table(table_df)
+st.markdown('</div>', unsafe_allow_html=True)
