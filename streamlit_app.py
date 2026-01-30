@@ -16,7 +16,7 @@ html, body, [class*="css"] {
 
 /* Hero banner */
 .hero {
-    background-image: url("https://esdnews.com.au/palmer-wind-farm-gets-go-ahead-in-south-australia/");
+    background-image: url("https://esdnews.com.au/wp-content/uploads/2023/08/Palmer-Wind-Farm-SA.jpg");
     background-size: cover;
     background-position: center;
     padding: 90px 40px;
@@ -82,18 +82,20 @@ folium.raster_layers.TileLayer(
     name="Wind",
     overlay=True,
     control=True,
-    opacity=0.55,
+    opacity=0.9,
 ).add_to(m)
 
 # wind farm markers
 
 for _, row in df.iterrows():
 
-    popup_text = (
-        f"{row['Station Name']}<br>"
-        f"{row['SCADAVALUE']} MW / {row['REG_CAP']} MW<br>"
-        f"{row['utilisation_pct']:.1f}% utilisation"
-    )
+    popup_text = f"""
+        <b>{row['Station Name']}</b><br>
+        Output: {row['SCADAVALUE']} MW<br>
+        Capacity: {row['REG_CAP']} MW<br>
+        Utilisation: {row['utilisation_pct']:.1f}%
+        """
+
 
     # Actual output
     folium.CircleMarker(
@@ -124,42 +126,38 @@ map_data = st_folium(
     width=1400,
     height=700,
     key="wind_map",
+    returned_objects=["last_popup"]
 )
 
 # click-reactive table
 st.markdown("---")
 
-if map_data and map_data.get("last_clicked"):
-    lat = map_data["last_clicked"]["lat"]
-    lon = map_data["last_clicked"]["lng"]
+st.markdown("---")
 
-    # Find nearest wind farm
-    df["distance"] = (
-        (df["Latitude"] - lat) ** 2 +
-        (df["Longitude"] - lon) ** 2
-    )
+if map_data and map_data.get("last_popup"):
+    popup_html = map_data["last_popup"]
 
-    clicked = df.sort_values("distance").iloc[0:1]
+    # Extract station name from popup
+    for _, row in df.iterrows():
+        if row["Station Name"] in popup_html:
+            selected = row
+            break
+    else:
+        selected = None
 
-    table_df = clicked[[
-        "Station Name",
-        "SCADAVALUE",
-        "REG_CAP",
-        "utilisation_pct",
-        "timestamp_utc",
-    ]].rename(columns={
-        "Station Name": "Wind Farm",
-        "SCADAVALUE": "Output (MW)",
-        "REG_CAP": "Capacity (MW)",
-        "utilisation_pct": "Utilisation (%)",
-        "timestamp_utc": "Last Update (UTC)",
-    })
+    if selected is not None:
+        table_df = pd.DataFrame([{
+            "Wind Farm": selected["Station Name"],
+            "Output (MW)": selected["SCADAVALUE"],
+            "Capacity (MW)": selected["REG_CAP"],
+            "Utilisation (%)": round(selected["utilisation_pct"], 1),
+            "Last Update (UTC)": selected["timestamp_utc"],
+        }])
 
-    st.dataframe(
-        table_df,
-        use_container_width=True,
-        hide_index=True,
-    )
-
+        st.dataframe(
+            table_df,
+            use_container_width=True,
+            hide_index=True
+        )
 else:
-    st.info("Click near a wind farm on the map to see detailed information.")
+    st.info("Click a wind farm marker to see details.")
