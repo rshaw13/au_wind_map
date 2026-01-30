@@ -72,6 +72,18 @@ st.markdown(
         border-bottom: 1px solid #f0f2f6;
         color: #31333F;
     }
+
+    /* Target the wind tiles specifically */
+    /* This filter chain turns the rainbow tiles into a soft peach/orange tint */
+    .leaflet-tile-pane .leaflet-layer:nth-child(2) img {
+        filter: grayscale(100%) sepia(100%) hue-rotate(330deg) saturate(2) brightness(1.1) !important;
+        mix-blend-mode: multiply; /* Helps the color blend into the map */
+    }
+
+    /* Alternative for a Blue tint (#449FBA):
+       filter: grayscale(100%) sepia(100%) hue-rotate(160deg) saturate(3) brightness(0.8) !important;
+    */
+
     </style>
     """,
     unsafe_allow_html=True
@@ -85,7 +97,39 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.caption(f"An energy project by Ryan Shaw")
+
+st.markdown(
+    f'<div style="margin-left: 50px;">'
+    f'An energy project by Ryan Shaw. Contact me on LinkedIn:'
+    f'</div>', 
+    unsafe_allow_html=True
+)
+
+# Define your URL
+linkedin_url = "https://www.linkedin.com/in/ryan-shaw13/"
+
+# Move it X pixels to the right using margin-left
+x_pixels = "250px" 
+
+st.markdown(
+    f"""
+    <div style="
+        display: flex; 
+        align-items: center; 
+        gap: 10px; 
+        margin-left: {x_pixels}; 
+        font-family: 'Inter', sans-serif;
+        color: #6d7280;
+        font-size: 0.85rem;
+    ">
+        <span>Last update (UTC): {df['timestamp_utc'].iloc[0]}</span>
+        <a href="{linkedin_url}" target="_blank" style="text-decoration: none; display: flex; align-items: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/250px-LinkedIn_icon.svg.png" width="18px" height="18px">
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # loading DATA
 
