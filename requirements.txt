@@ -3,3 +3,4 @@ requests
 streamlit
 folium
 beautifulsoup4
+altair<5
