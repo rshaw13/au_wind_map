@@ -6,29 +6,58 @@ from streamlit_folium import st_folium
 # styling
 st.set_page_config(layout="wide")
 
+st.title("Australian Wind Farm Output")
+
+st.markdown(
+    """
+    <style>
+    html, body, [class*="css"] {
+        font-family: "Inter", sans-serif;
+    }
+
+    /* Hero banner */
+    .hero {
+        background-image: url("https://esdnews.com.au/wp-content/uploads/2023/08/Palmer-Wind-Farm-SA.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 90px 40px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+    }
+
+    .hero h1 {
+        color: white;
+        text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    }
+
+    /* Table styling */
+    [data-testid="stDataFrame"] thead tr th {
+        background-color: #e6f2ff;
+        color: black;
+    }
+
+    [data-testid="stDataFrame"] tbody tr {
+        background-color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    """
+    <div class="hero">
+        <h1>Australian Wind Farm Output</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 st.image(
     "https://esdnews.com.au/wp-content/uploads/2023/08/Palmer-Wind-Farm-SA.jpg",
     use_column_width=True
 )
 
-st.title("Australian Wind Farm Output")
-
-st.markdown("""
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-html, body, [class*="css"] {
-    font-family: "Inter", sans-serif;
-}
-
-[data-testid="stDataFrame"] thead tr th {
-    background-color: #e6f2ff;
-}
-
-[data-testid="stDataFrame"] tbody tr {
-    background-color: white;
-}
-</style>
-""", unsafe_allow_html=True)
 
 
 # loading DATA
@@ -142,5 +171,4 @@ table_df = pd.DataFrame([{
 st.dataframe(
     table_df,
     use_container_width=True,
-    hide_index=True
 )
