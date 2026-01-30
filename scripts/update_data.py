@@ -3,9 +3,11 @@ import requests
 import zipfile
 import io
 from datetime import datetime
+from bs4 import BeautifulSoup
+
 
 # ---------------- CONFIG ----------------
-SCADA_ZIP_URL = "https://www.nemweb.com.au/REPORTS/CURRENT/Dispatch_SCADA/PUBLIC_DISPATCHSCADA_202510091445_0000000484122218.zip"
+SCADA_BASE_URL = "https://www.nemweb.com.au/REPORTS/CURRENT/Dispatch_SCADA/"
 
 CAPACITY_FILE = "Full NEM Plant Registration.csv"
 COORDS_FILE = "Clean Coords.csv"
@@ -13,6 +15,25 @@ COORDS_FILE = "Clean Coords.csv"
 OUTPUT_FILE = "data/latest_wind_data.csv"
 # ----------------------------------------
 
+def get_latest_scada_url() -> str:
+    r = requests.get(SCADA_BASE_URL, timeout=30)
+    r.raise_for_status()
+
+    soup = BeautifulSoup(r.text, "html.parser")
+
+    zip_files = [
+        a["href"]
+        for a in soup.find_all("a", href=True)
+        if a["href"].endswith(".zip")
+    ]
+
+    if not zip_files:
+        raise RuntimeError("No SCADA zip files found")
+
+    zip_files.sort(reverse=True)  # newest first
+    latest = zip_files[0]
+
+    return SCADA_BASE_URL + latest
 def get_latest_scada(zip_url: str) -> pd.DataFrame:
     r = requests.get(zip_url, timeout=30)
     r.raise_for_status()
@@ -55,7 +76,10 @@ def build_wind_dataset(scada: pd.DataFrame) -> pd.DataFrame:
 
 def main():
     print("Fetching SCADA...")
-    scada = get_latest_scada(SCADA_ZIP_URL)
+    latest_url = get_latest_scada_url()
+    print(f"Using SCADA file: {latest_url}")
+    scada = get_latest_scada(latest_url)
+
 
     print("Merging datasets...")
     final = build_wind_dataset(scada)
