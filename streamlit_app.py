@@ -24,24 +24,24 @@ st.markdown(
         background-attachment: fixed;
     }
 
-    /* Hero banner - fixed URL and height */
+    /* Hero banner - Gradient */
     .hero {
-        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                          url("https://www.arup.com/globalassets/images/projects/a/australis-energy-offshore-wind-farm/australis-offshore-windfarms-cgetty-2000x1125.jpg");
-        background-size: cover;
-        background-position: center;
+        background: linear-gradient(90deg, rgba(225, 169, 131, 1) 9%, rgba(202, 94, 47, 1) 67%); 
         padding: 60px 40px;
         border-radius: 12px;
         margin-bottom: 25px;
         text-align: center;
+        background-size: cover;
+        background-position: center;
     }
 
     .hero h1 {
-        color: #fc214c;
+        color: #EFD0BB;
         font-family: 'Cormorant Garamond', serif;
         font-weight: 700;
         font-size: 4rem; 
         margin: 0;
+        box-shadow: 2px 4px 14px 5px rgba(86,47,20,0.39);
     }
 
     /* Content box for table and seleciton box */
@@ -84,6 +84,20 @@ def load_data():
 
 df = load_data()
 
+
+# title for map section
+with st.container():
+    st.markdown("""
+    <style>
+    .custom-text {
+        color: #132c34; 
+        font-size: 35px;
+    }
+    </style>
+    <p class="custom-text"><strong>Windfarm Output Map</strong></p>
+    """, unsafe_allow_html=True)
+
+
 # wind farm selector
 with st.container():
     selected_name = st.selectbox(
@@ -95,19 +109,6 @@ selected_row = df[df["Station Name"] == selected_name].iloc[0]
 
 
 # setting up folium map
-with st.container():
-    st.write("### Windfarm Output Map")
-    st.write('<p>Windfarm Output Map</p>', unsafe_allow_html=True)
-    st.markdown("""
-    <style>
-    .custom-text {
-        color: #FC0C3B; /* Using a hex code */
-        font-size: 20px;
-    }
-    </style>
-    <p class="custom-text">This text uses a custom CSS class.</p>
-    """, unsafe_allow_html=True)
-
 m = folium.Map(
     location=[-30, 145],
     zoom_start=4.5,
@@ -118,12 +119,13 @@ scale = 0.15
 openweathermap_api_key = st.secrets["OPENWEATHERMAP_API_KEY"]
 
 # wind layer
-wind_colour_palette = "0:#fcfcfc;10:#a9d3df;50:#5aabc2"
+wind_colour_palette = "0:fcfcfc;10:a9d3df;50:5aabc2"
 
 wind_tiles = (
-    "https://tile.openweathermap.org{z}/{x}/{y}.png"
+    "https://maps.openweathermap.org{z}/{x}/{y}.png"
     f"?appid={openweathermap_api_key}"
     f"&palette={wind_colour_palette}"
+    "&fill_bound=true"
 )
 
 folium.raster_layers.TileLayer(
@@ -154,8 +156,8 @@ for _, row in df.iterrows():
         radius=row["SCADAVALUE"] * scale,
         fill=True,
         fill_opacity=0.5,
-        fill_color="blue" if is_selected else (
-            "green" if row["utilisation_pct"] > 50 else "red"
+        fill_color="#FC0C3B" if is_selected else (
+            "#449fba" if row["utilisation_pct"] > 50 else "#ca5e2f"
         ),
         stroke=False,
         tooltip=row['Station Name'],
@@ -170,7 +172,7 @@ for _, row in df.iterrows():
         weight=1,
         fill=True,
         fill_opacity=0.2 if is_selected else 0,
-        fill_color="blue",
+        fill_color="#FC0C3B",
         tooltip=row['Station Name'],
         popup=popup_text,
     ).add_to(m)
@@ -178,8 +180,8 @@ for _, row in df.iterrows():
 # render map
 map_data = st_folium(
     m,
-    width=1400,
-    height=700,
+    width=1700,
+    height=800,
     key="wind_map",
 )
 
