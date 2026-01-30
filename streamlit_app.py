@@ -134,8 +134,7 @@ openweathermap_api_key = st.secrets["OPENWEATHERMAP_API_KEY"]
 wind_colour_palette = "0:fcfcfc;10:a9d3df;50:5aabc2"
 
 wind_tiles = (
-    f"https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid={openweathermap_api_key}"
-    f"&fill_bound=true"
+    "https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid={openweathermap_api_key}"
 )
 
 folium.raster_layers.TileLayer(
