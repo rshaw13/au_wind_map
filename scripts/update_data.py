@@ -5,6 +5,7 @@ import io
 from datetime import datetime
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
+from pathlib import Path
 
 
 # ---------------- CONFIG ----------------
