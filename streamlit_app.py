@@ -4,7 +4,10 @@ import folium
 from streamlit_folium import st_folium
 
 # styling
-st.set_page_config(layout="wide")
+st.set_page_config(
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
 
 st.markdown(
     """
@@ -34,29 +37,31 @@ st.markdown(
         background-size: cover;
         background-position: center;
         box-shadow: 2px 4px 14px 5px rgba(86,47,20,0.39);
+        padding: 30px 20px;
     }
 
     .hero h1 {
         color: #EFD0BB;
         font-family: 'Garamond', serif;
         font-weight: 700;
-        font-size: 4rem; 
+        font-size: 2.2rem; 
         margin: 0;
         text-shadow: 2px 4px 14px 5px rgba(86,47,20,0.39);
     }
 
     .content-card {
         background-color: white !important;
-        padding: 25px;
+        padding: 15px;
         border-radius: 15px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
         margin-bottom: 20px;
         color: #31333F !important;
+        overflow-x: auto;
     }
 
     .custom-text {
         color: #0a0a0a;
-        font-size: 35px;
+        font-size: 22px;
         font-weight: bold;
         margin-top: 20px;
     }
@@ -73,6 +78,7 @@ st.markdown(
         background-color: #e1a983;
         color: black;
         border-bottom: 2px solid #f0f2f6;
+        min-width: 600px;
     }
     .custom-table td {
         padding: 12px 8px;
@@ -224,7 +230,7 @@ for _, row in df.iterrows():
 map_data = st_folium(
     m,
     width=None,
-    height=700,
+    height=450 if st.session_state.get("is_mobile", False) else 600,
     key="wind_map",
 )
 
@@ -250,7 +256,9 @@ st.markdown(
     f"""
     <div class="content-card">
         <h3 style="color: #31333F;">Selected Wind Farm Details</h3>
-        {table_html}
+        <div style="overflow-x:auto;">
+            {table_html}
+        </div>
     </div>
     """,
     unsafe_allow_html=True
