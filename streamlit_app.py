@@ -80,11 +80,12 @@ st.markdown(
 st.markdown(
     """
     <div class="hero">
-        <h1>Australian Wind Farm Output Map</h1>
+        <h1>Australian Wind Power Plant Output Map</h1>
     </div>
     """,
     unsafe_allow_html=True
 )
+st.caption(f"An energy project by Ryan Shaw")
 
 # loading DATA
 
@@ -107,7 +108,7 @@ st.markdown("""
     font-size: 35px;
 }
 </style>
-<p class="custom-text"><strong>Windfarm Output Map</strong></p>
+<p class="custom-text"><strong>Current Output Map</strong></p>
 """, unsafe_allow_html=True)
 
 # wind farm selector
@@ -131,9 +132,9 @@ openweathermap_api_key = st.secrets["OPENWEATHERMAP_API_KEY"]
 
 # wind layer
 wind_tiles = (
-    "https://tile.openweathermap.org/maps/wind_new/{z}/{x}/{y}.png"
+    "https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png"
     f"?appid={openweathermap_api_key}"
-    f"&fill_bound=true"
+
 )
 
 folium.raster_layers.TileLayer(
