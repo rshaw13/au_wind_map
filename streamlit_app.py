@@ -45,29 +45,30 @@ st.markdown(
         text-shadow: 2px 4px 14px 5px rgba(86,47,20,0.39);
     }
 
-    /* This targets the vertical block that holds our container content */
-    /* We use a 'key' hack to find the right one */
-    div[data-testid="stVerticalBlock"] > div:has(.st-key-table_container) {
+    .content-card {
         background-color: white !important;
-        padding: 30px !important;
-        border-radius: 15px !important;
-        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2) !important;
-        margin-top: 20px !important;
-    }
-
-    /* Target the selection box container similarly */
-    div[data-testid="stVerticalBlock"] > div:has(.st-key-select_container) {
-        background-color: white !important;
-        padding: 30px !important;
-        border-radius: 15px !important;
-        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2) !important;
-    }
-
-    /* Ensure text inside is readable */
-    div[data-testid="stVerticalBlock"] p, 
-    div[data-testid="stVerticalBlock"] h3, 
-    div[data-testid="stVerticalBlock"] label {
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
         color: #31333F !important;
+    }
+    
+    /* Style the HTML table to look like Streamlit's */
+    .custom-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+    .custom-table th {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 2px solid #f0f2f6;
+        color: #6d7280;
+    }
+    .custom-table td {
+        padding: 12px 8px;
+        border-bottom: 1px solid #f0f2f6;
     }
 
     </style>
@@ -110,13 +111,11 @@ st.markdown("""
 
 
 # wind farm selector
-with st.container():
-    st.markdown('<div class="st-key-select_container"></div>', unsafe_allow_html=True)
-    selected_name = st.selectbox(
-        "Select a wind farm for output information",
-        df["Station Name"].sort_values().unique()
-    )
-
+st.markdown('<div class="content-card">', unsafe_allow_html=True)
+selected_name = st.selectbox(
+    "Select a wind farm for output information",
+    df["Station Name"].sort_values().unique()
+)
 
 selected_row = df[df["Station Name"] == selected_name].iloc[0]
 
@@ -135,10 +134,7 @@ openweathermap_api_key = st.secrets["OPENWEATHERMAP_API_KEY"]
 wind_colour_palette = "0:fcfcfc;10:a9d3df;50:5aabc2"
 
 wind_tiles = (
-    f"https://tile.openweathermap.org/map/WNDUV{z}/{x}/{y}.png"
-    f"?&use_norm=true&arrow_step=16"
-    f"?appid={openweathermap_api_key}"
-    f"&palette={wind_colour_palette}"
+    f"https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid={openweathermap_api_key}"
     f"&fill_bound=true"
 )
 
@@ -201,31 +197,38 @@ map_data = st_folium(
 
 st.caption(f"Last update (UTC): {df['timestamp_utc'].iloc[0]}")
 
+st.markdown("""
+<style>
+.custom-text {
+    color: #d48149; 
+    font-size: 35px;
+}
+</style>
+<p class="custom-text"><strong>Selected Wind Farm Details</strong></p>
+""", unsafe_allow_html=True)
 
-with st.container():
-    st.markdown('<div class="st-key-select_container"></div>', unsafe_allow_html=True)
-    # st.markdown("### Selected Wind Farm Details")
 
-    st.markdown("""
-    <style>
-    .custom-text {
-        color: #d48149; 
-        font-size: 35px;
-    }
-    </style>
-    <p class="custom-text"><strong>Selected Wind Farm Details</strong></p>
-    """, unsafe_allow_html=True)
-
-    # selection-specific farm data table
-    table_df = pd.DataFrame([{
-        "Wind Farm": str(selected_row["Station Name"]),
-        "DUID": str(selected_row["DUID"]),
-        "Output (MW)": float(round(selected_row["SCADAVALUE"],1)),
-        "Capacity (MW)": float(round(selected_row["REG_CAP"],1)),
-        "Utilisation (%)": float(round(selected_row["utilisation_pct"], 0)),
-        "Last Update (UTC)": str(selected_row["timestamp_utc"]),
-    }])
-    table_df = table_df.astype(object)
-
+# selection-specific farm data table
+table_df = pd.DataFrame([{
+    "Wind Farm": str(selected_row["Station Name"]),
+    "DUID": str(selected_row["DUID"]),
+    "Output (MW)": float(round(selected_row["SCADAVALUE"],1)),
+    "Capacity (MW)": float(round(selected_row["REG_CAP"],1)),
+    "Utilisation (%)": float(round(selected_row["utilisation_pct"], 0)),
+    "Last Update (UTC)": str(selected_row["timestamp_utc"]),
+}])
+table_df = table_df.astype(object)
 
 st.table(table_df)
+
+table_html = table_df.to_html(index=False, classes='custom-table')
+
+st.markdown(
+    f"""
+    <div class="content-card">
+        <h3 style="color: #31333F;">Selected Wind Farm Details</h3>
+        {table_html}
+    </div>
+    """,
+    unsafe_allow_html=True
+)
