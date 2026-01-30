@@ -62,15 +62,15 @@ def build_wind_dataset(scada: pd.DataFrame) -> pd.DataFrame:
     wind = capacity[
         capacity["Fuel Source - Primary"].str.contains("Wind", na=False)
     ][
-        ["Participant", "Station Name", "Fuel Source - Primary", "DUID", "Reg Cap generation (MW)"]
+        ["Participant", "Station Name", "Fuel Source - Primary", "DUID", "Max Cap generation (MW)"]
     ]
 
-    wind = wind.rename(columns={"Reg Cap generation (MW)": "REG_CAP"})
-    wind["REG_CAP"] = wind["REG_CAP"].astype(float)
+    wind = wind.rename(columns={"Max Cap generation (MW)": "MAX_CAP"})
+    wind["MAX_CAP"] = wind["MAX_CAP"].astype(float)
 
     merged = scada.merge(wind, on="DUID", how="inner")
 
-    merged["utilisation_pct"] = (merged["SCADAVALUE"] / merged["REG_CAP"] * 100).round(2)
+    merged["utilisation_pct"] = (merged["SCADAVALUE"] / merged["MAX_CAP"] * 100).round(2)
 
     coords = pd.read_csv(COORDS_FILE)
     merged = merged.merge(coords, left_on="Station Name", right_on="Plant", how="inner")
