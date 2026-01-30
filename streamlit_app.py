@@ -207,7 +207,7 @@ for _, row in df.iterrows():
     popup_text = f"""
         <b>{row['Station Name']}</b><br>
         Output: {row['SCADAVALUE']} MW<br>
-        Capacity: {row['REG_CAP']} MW<br>
+        Capacity: {row['MAX_CAP']} MW<br>
         Utilisation: {row['utilisation_pct']:.1f}%
         """
 
@@ -228,7 +228,7 @@ for _, row in df.iterrows():
     # Capacity ring
     folium.CircleMarker(
         location=[row["Latitude"], row["Longitude"]],
-        radius=row["REG_CAP"] * scale,
+        radius=row["MAX_CAP"] * scale,
         color="gray",
         weight=1,
         fill=True,
@@ -255,7 +255,7 @@ table_df = pd.DataFrame([{
     "Wind Farm": str(selected_row["Station Name"]),
     "DUID": str(selected_row["DUID"]),
     "Output (MW)": float(round(selected_row["SCADAVALUE"],1)),
-    "Capacity (MW)": float(round(selected_row["REG_CAP"],1)),
+    "Capacity (MW)": float(round(selected_row["MAX_CAP"],1)),
     "Utilisation (%)": float(round(selected_row["utilisation_pct"], 0)),
     "Last Update (Aus Time)": str(selected_row["SETTLEMENTDATE"]),
 }])
