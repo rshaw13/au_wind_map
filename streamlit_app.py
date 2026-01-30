@@ -89,6 +89,17 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# loading DATA
+DATA_URL = (
+    "https://raw.githubusercontent.com/rshaw13/au_wind_map/refs/heads/main/data/latest_wind_data.csv"
+)
+@st.cache_data(ttl=300)
+def load_data():
+    return pd.read_csv(DATA_URL)
+
+df = load_data()
+
+# title and linkedin caption
 st.markdown(
     """
     <div class="hero">
@@ -97,27 +108,22 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 st.markdown(
     f'<div style="margin-left: 50px;">'
-    f'An energy project by Ryan Shaw. Contact me on LinkedIn:'
+    f'An energy project by Ryan Shaw.  Contact me on LinkedIn.'
     f'</div>', 
     unsafe_allow_html=True
 )
 
-# Define your URL
 linkedin_url = "https://www.linkedin.com/in/ryan-shaw13/"
-
-# Move it X pixels to the right using margin-left
-x_pixels = "250px" 
 
 st.markdown(
     f"""
     <div style="
         display: flex; 
-        align-items: center; 
+        align-items: right; 
         gap: 10px; 
-        margin-left: {x_pixels}; 
+        margin-left: 250px; 
         font-family: 'Inter', sans-serif;
         color: #6d7280;
         font-size: 0.85rem;
@@ -130,19 +136,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-# loading DATA
-
-DATA_URL = (
-    "https://raw.githubusercontent.com/rshaw13/au_wind_map/refs/heads/main/data/latest_wind_data.csv"
-)
-
-@st.cache_data(ttl=300)
-def load_data():
-    return pd.read_csv(DATA_URL)
-
-df = load_data()
-
 
 # title for map section
 st.markdown("""
