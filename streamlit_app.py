@@ -100,11 +100,11 @@ df = load_data()
 
 
 # title for map section
-with st.container():
+with st.container(border=True):
     st.markdown("""
     <style>
     .custom-text {
-        color: #132c34; 
+        color: #ad5e28; 
         font-size: 35px;
     }
     </style>
@@ -113,7 +113,7 @@ with st.container():
 
 
 # wind farm selector
-with st.container():
+with st.container(border=True):
     selected_name = st.selectbox(
         "Select a wind farm for output information",
         df["Station Name"].sort_values().unique()
@@ -136,7 +136,8 @@ openweathermap_api_key = st.secrets["OPENWEATHERMAP_API_KEY"]
 wind_colour_palette = "0:fcfcfc;10:a9d3df;50:5aabc2"
 
 wind_tiles = (
-    "https://maps.openweathermap.org{z}/{x}/{y}.png"
+    "https://tile.openweathermap.org/map/WNDUV{z}/{x}/{y}.png"
+    f"?&use_norm=true&arrow_step=16"
     f"?appid={openweathermap_api_key}"
     f"&palette={wind_colour_palette}"
     "&fill_bound=true"
@@ -194,8 +195,8 @@ for _, row in df.iterrows():
 # render map
 map_data = st_folium(
     m,
-    width=1900,
-    height=1000,
+    width=2000,
+    height=1100,
     key="wind_map",
 )
 
@@ -203,7 +204,7 @@ st.caption(f"Last update (UTC): {df['timestamp_utc'].iloc[0]}")
 
 
 # Wrap everything below the map in a div with the 'content-box' class
-with st.container():
+with st.container(border=True):
     st.markdown("### Selected Wind Farm Details")
 
     # selection-specific farm data table
