@@ -131,7 +131,7 @@ st.markdown(
     ">
         <span>Contact me on LinkedIn</span>
         <a href="{linkedin_url}" target="_blank" style="text-decoration: none; display: flex; align-items: center;">
-            <img src="https://upload.wikimedia.org" width="18px" height="18px">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/250px-LinkedIn_icon.svg.png" width="18px" height="18px">
         </a>
     </div>
     """,
@@ -162,7 +162,9 @@ selected_row = df[df["Station Name"] == selected_name].iloc[0]
 m = folium.Map(
     location=[-30, 145],
     zoom_start=4.5,
-    tiles="CartoDB positron"
+    tiles="CartoDB positron",
+    width='100%',
+    height='100%'
 )
 
 scale = 0.15
@@ -227,8 +229,8 @@ for _, row in df.iterrows():
 # render map
 map_data = st_folium(
     m,
-    width=2000,
-    height=900,
+    width=None,
+    height=700,
     key="wind_map",
 )
 
