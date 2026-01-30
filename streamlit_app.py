@@ -247,7 +247,7 @@ map_data = st_folium(
 )
 
 
-st.caption(f"Last update (Aus Time): {df['SETTLEMENTDATE'].iloc[0]}")
+st.caption(f"Last update (Aus Time): {df['SETTLEMENTDATE'].iloc[0]} - (Latest published AEMO data is 1 hour behind current)")
 
 
 # selection-specific farm data table
