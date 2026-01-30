@@ -163,21 +163,18 @@ map_data = st_folium(
     key="wind_map",
 )
 
-# click-reactive table
+# selection-specific farm data table
 st.markdown("### Selected wind farm")
 
 table_df = pd.DataFrame([{
-    "Wind Farm": str(selected_row["Station Name"]),
-    "Output (MW)": float(selected_row["SCADAVALUE"]),
-    "Capacity (MW)": float(selected_row["REG_CAP"]),
-    "Utilisation (%)": float(round(selected_row["utilisation_pct"], 1)),
-    "Last Update (UTC)": str(selected_row["timestamp_utc"]),
+    "Wind Farm": selected_row["Station Name"].astype(str),
+    "DUID": selected_row["DUID"].astype(str),
+    "Output (MW)": selected_row["SCADAVALUE"].astype(float),
+    "Capacity (MW)": selected_row["REG_CAP"].astype(float),
+    "Utilisation (%)": round(selected_row["utilisation_pct"], 1).astype(float),
+    "Last Update (UTC)": selected_row["timestamp_utc"].astype(str),
 }])
 
-# Force Arrow-safe dtypes
-table_df = table_df.astype({
-    "Wind Farm": "object",
-    "Last Update (UTC)": "object"
-})
+# table_df = table_df.astype(object)
 
 st.table(table_df)
