@@ -108,12 +108,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.markdown(
-    f'<div style="margin-left: 50px;">'
-    f'An energy project by Ryan Shaw.'
-    f'</div>', 
-    unsafe_allow_html=True
-)
 
 linkedin_url = "https://www.linkedin.com/in/ryan-shaw13/"
 
@@ -121,18 +115,21 @@ st.markdown(
     f"""
     <div style="
         display: flex; 
+        justify-content: space-between;
         align-items: center; 
-        justify-content: flex-end; /* Aligns content to the right edge */
-        gap: 10px; 
-        margin-bottom: 10px; /* Added spacing below the element */
+        margin-bottom: 10px;
         font-family: 'Inter', sans-serif;
         color: #6d7280;
         font-size: 0.85rem;
     ">
-        <span>Contact me on LinkedIn</span>
-        <a href="{linkedin_url}" target="_blank" style="text-decoration: none; display: flex; align-items: center;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/250px-LinkedIn_icon.svg.png" width="18px" height="18px">
-        </a>
+        <div>An energy project by Ryan Shaw.</div>
+
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <span>Contact me on LinkedIn: </span>
+            <a href="{linkedin_url}" target="_blank" style="text-decoration: none; display: flex; align-items: center;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/250px-LinkedIn_icon.svg.png" width="18px" height="18px">
+            </a>
+        </div>
     </div>
     """,
     unsafe_allow_html=True
@@ -144,6 +141,7 @@ st.markdown("""
 .custom-text {
     color: #31333F; 
     font-size: 35px;
+    text-shadow: 2px 4px 14px 5px rgba(86,47,20,0.39);
 }
 </style>
 <p class="custom-text"><strong>Current Plant Output Map</strong></p>
