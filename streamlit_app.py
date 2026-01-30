@@ -78,7 +78,8 @@ st.markdown(
         background-color: #e1a983;
         color: black;
         border-bottom: 2px solid #f0f2f6;
-        min-width: 600px;
+        width: 100%;
+        table-layout: auto;
     }
     .custom-table td {
         padding: 12px 8px;
@@ -96,6 +97,17 @@ st.markdown(
     /* Alternative for a Blue tint (#449FBA):
        filter: grayscale(100%) sepia(100%) hue-rotate(160deg) saturate(3) brightness(0.8) !important;
     */
+
+    /* Mobile only */
+    @media (max-width: 768px) {
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .custom-table {
+            min-width: 600px;
+    }
 
     </style>
     """,
@@ -235,7 +247,7 @@ map_data = st_folium(
 )
 
 
-st.caption(f"Last update (UTC): {df['timestamp_utc'].iloc[0]}")
+st.caption(f"Last update (Aus Time): {df['SETTLEMENTDATE'].iloc[0]}")
 
 
 # selection-specific farm data table
@@ -245,7 +257,7 @@ table_df = pd.DataFrame([{
     "Output (MW)": float(round(selected_row["SCADAVALUE"],1)),
     "Capacity (MW)": float(round(selected_row["REG_CAP"],1)),
     "Utilisation (%)": float(round(selected_row["utilisation_pct"], 0)),
-    "Last Update (UTC)": str(selected_row["timestamp_utc"]),
+    "Last Update (Aus Time)": str(selected_row["SETTLEMENTDATE"]),
 }])
 
 # forcing as object dtype then making bare html for streamlit
@@ -256,7 +268,7 @@ st.markdown(
     f"""
     <div class="content-card">
         <h3 style="color: #31333F;">Selected Wind Farm Details</h3>
-        <div style="overflow-x:auto;">
+        <div class="table-wrapper">
             {table_html}
         </div>
     </div>
