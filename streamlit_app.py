@@ -4,7 +4,7 @@ import folium
 from streamlit_folium import st_folium
 
 DATA_URL = (
-    "https://raw.githubusercontent.com/rshaw13/wind-map/main/data/latest_wind_data.csv"
+    "https://raw.githubusercontent.com/rshaw13/au_wind_map/refs/heads/main/data/latest_wind_data.csv"
 )
 
 st.set_page_config(layout="wide")
