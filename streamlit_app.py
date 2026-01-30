@@ -11,34 +11,38 @@ st.set_page_config(layout="wide")
 st.markdown(
     """
     <style>
+ */
+    @import url('https://fonts.googleapis.com');
+
     html, body, [class*="css"] {
         font-family: "Inter", sans-serif;
     }
 
     /* Hero banner */
     .hero {
-        background-image: url("https://esdnews.com.au/wp-content/uploads/2020/11/windfarm.jpg");
+        background-image: url("https://esdnews.com.au");
         background-size: cover;
         background-position: center;
-        */ padding: 90px 40px;
-        */ border-radius: 12px;
+        padding: 90px 40px;
+        border-radius: 12px;
         margin-bottom: 25px;
     }
 
     .hero h1 {
-        color: white;
-        font-family: "Garamond", sans-serif;
+        color: #fc214c;
+        font-family: 'Cormorant Garamond', serif;
         font-weight: bold;
+        font-size: 3rem; 
     }
 
     /* Table styling */
     [data-testid="stDataFrame"] thead tr th {
-        background-color: ##67a4e6;
+        background-color: #67a4e6;
         color: black;
     }
 
     [data-testid="stDataFrame"] tbody tr {
-        background-color: #d9eafc;
+        background-color: #5aabc2;
     }
     </style>
     """,
@@ -53,6 +57,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 # st.image(
 #    "https://esdnews.com.au/wp-content/uploads/2020/11/windfarm.jpg",
@@ -93,10 +98,12 @@ scale = 0.15
 openweathermap_api_key = st.secrets["OPENWEATHERMAP_API_KEY"]
 
 # wind layer
+wind_colour_palette = "0:fcfcfc;10:a9d3df;50:5aabc2"
 
 wind_tiles = (
-    "https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png"
+    "https://tile.openweathermap.org{z}/{x}/{y}.png"
     f"?appid={openweathermap_api_key}"
+    f"&palette={wind_colour_palette}"
 )
 
 folium.raster_layers.TileLayer(
@@ -159,13 +166,14 @@ map_data = st_folium(
 # selection-specific farm data table
 st.markdown("### Selected wind farm")
 
+
 table_df = pd.DataFrame([{
-    "Wind Farm": selected_row["Station Name"].astype(str),
-    "DUID": selected_row["DUID"].astype(str),
-    "Output (MW)": selected_row["SCADAVALUE"].astype(float),
-    "Capacity (MW)": selected_row["REG_CAP"].astype(float),
-    "Utilisation (%)": round(selected_row["utilisation_pct"], 1).astype(float),
-    "Last Update (UTC)": selected_row["timestamp_utc"].astype(str),
+    "Wind Farm": str(selected_row["Station Name"]),
+    "DUID": str(selected_row["DUID"]),
+    "Output (MW)": float(selected_row["SCADAVALUE"]),
+    "Capacity (MW)": float(selected_row["REG_CAP"]),
+    "Utilisation (%)": float(round(selected_row["utilisation_pct"], 1)),
+    "Last Update (UTC)": str(selected_row["timestamp_utc"]),
 }])
 
 table_df = table_df.astype(object)
