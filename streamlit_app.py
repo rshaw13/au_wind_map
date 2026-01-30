@@ -145,7 +145,7 @@ st.markdown("""
 
 # wind farm selector
 selected_name = st.selectbox(
-    "Select a wind farm for output information",
+    "Hover over a plant on the map to find its name, then use the drop-down to select a wind farm for output information in the table below",
     df["Station Name"].sort_values().unique()
 )
 
