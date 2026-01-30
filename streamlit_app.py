@@ -23,6 +23,13 @@ m = folium.Map(location=[-30, 145], zoom_start=4.5, tiles="CartoDB positron")
 scale = 0.15
 
 for _, row in df.iterrows():
+
+    tooltip_text = (
+    f"{row['Station Name']}<br>"
+    f"{row['SCADAVALUE']} MW / {row['REG_CAP']} MW<br>"
+    f"{row['utilisation_pct']}%"
+    )
+
     folium.CircleMarker(
         location=[row["Latitude"], row["Longitude"]],
         radius=row["SCADAVALUE"] * scale,
@@ -30,11 +37,7 @@ for _, row in df.iterrows():
         fill_opacity=0.5,
         fill_color="green" if row["utilisation_pct"] > 50 else "red",
         stroke=False,
-        tooltip=(
-            f"{row['Station Name']}<br>"
-            f"{row['SCADAVALUE']} MW / {row['REG_CAP']} MW<br>"
-            f"{row['utilisation_pct']}%"
-        ),
+        tooltip=folium.Tooltip(tooltip_text),
     ).add_to(m)
 
     folium.CircleMarker(
