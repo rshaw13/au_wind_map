@@ -119,7 +119,7 @@ st.markdown(
 linkedin_url = "https://www.linkedin.com/in/ryan-shaw13/"
 st.markdown(
     f"""
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; color: #6d7280; font-size: 0.85rem;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; color: #0a0a0a; font-size: 0.85rem;">
         <div>An energy project by Ryan Shaw.</div>
         <div style="display: flex; align-items: center; gap: 10px;">
             <span>Contact me on LinkedIn: </span>
