@@ -8,7 +8,7 @@ st.set_page_config(layout="wide")
 
 st.image(
     "https://esdnews.com.au/wp-content/uploads/2023/08/Palmer-Wind-Farm-SA.jpg",
-    use_container_width=True
+    use_column_width=True
 )
 
 st.title("Australian Wind Farm Output")
