@@ -183,16 +183,16 @@ scale = 0.15
 openweathermap_api_key = st.secrets["OPENWEATHERMAP_API_KEY"]
 
 # wind layer
-wind_vector_tiles = (
-    "https://tile.openweathermap.org/map/wnDUV/{z}/{x}/{y}.png"
+wind_tiles = (
+    "https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png"
     f"?appid={openweathermap_api_key}"
 
 )
 
 folium.raster_layers.TileLayer(
-    tiles=wind_vector_tiles,
-    attr="OpenWeatherMap Wind Vector",
-    name="Wind Direction & Speed",
+    tiles=wind_tiles,
+    attr="OpenWeatherMap",
+    name="Wind",
     overlay=True,
     control=True,
     opacity=0.9,
