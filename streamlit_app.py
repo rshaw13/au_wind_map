@@ -183,7 +183,7 @@ scale = 0.15
 openweathermap_api_key = st.secrets["OPENWEATHERMAP_API_KEY"]
 
 # wind layer
-wind_tiles = (
+wind_vector_tiles = (
     "https://tile.openweathermap.org/map/wnDUV/{z}/{x}/{y}.png"
     f"?appid={openweathermap_api_key}"
 
