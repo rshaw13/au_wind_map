@@ -1,94 +1,94 @@
 SETTLEMENTDATE,DUID,SCADAVALUE,Participant,Station Name,Fuel Source - Primary,MAX_CAP,utilisation_pct,Plant,Latitude,Longitude,timestamp_utc
-2026/02/18 05:15:00,CAPTL_WF,100.53,Iberdrola Australia Holdings Pty Limited,Capital Wind Farm,Wind,140.0,71.81,Capital Wind Farm,-35.1,149.31,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,CHALLHWF,8.9,Pacific Hydro Challicum Hills Pty Ltd,Challicum Hills Wind Farm,Wind,52.0,17.12,Challicum Hills Wind Farm,-37.38,143.11,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,CULLRGWF,27.46,Cullerin Range Wind Farm Pty Ltd,Cullerin Range Wind Farm,Wind,30.0,91.53,Cullerin Range Wind Farm,-34.81,149.4,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,DIAPURWF1,6.9,Y.E.S. Energy (SA) Pty Ltd,Diapur Wind Farm,Wind,7.0,98.57,Diapur Wind Farm,-36.3425,141.43,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,MLWF1,4.39,Mortons Lane Windfarm Pty Limited,Mortons Lane Wind Farm,Wind,20.0,21.95,Mortons Lane Wind Farm,-37.84,142.45,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,WAUBRAWF,76.76,Pyrenees Wind Energy Developments Pty Ltd,Waubra Wind Farm,Wind,192.0,39.98,Waubra Wind Farm,-37.394498,143.638982,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,WOOLNTH1,79.02,Hydro-Electric Corporation,Woolnorth Studland Bay / Bluff Point Wind Farm,Wind,140.0,56.44,Woolnorth Studland Bay / Bluff Point Wind Farm,-40.69,144.72,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,YAMBUKWF,5.3,Energy Pacific (Vic) Pty Ltd,Yambuk Wind Farm,Wind,30.0,17.67,Yambuk Wind Farm,-38.299083,142.027577,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,YSWF1,9.1,Pacific Hydro Yaloak South Pty Ltd,Yaloak South Wind Farm,Wind,28.0,32.5,Yaloak South Wind Farm,-37.7163,144.242853,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,ARWF1,76.9,Ararat Wind Farm Pty Ltd,Ararat Wind Farm,Wind,241.0,31.91,Ararat Wind Farm,-37.232778,143.031389,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,BALDHWF1,43.46,Alinta Energy Retail Sales Pty Ltd,Bald Hills Wind Farm,Wind,106.0,41.0,Bald Hills Wind Farm,-38.79,145.93,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,BANGOWF1,74.7,BWF Nominees Pty Ltd as The Trustee for BWF Trust,Bango 973 Wind Farm,Wind,155.0,48.19,Bango 973 Wind Farm,-34.551582,148.732808,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,BANGOWF2,53.3,BWF Nominees Pty Ltd as The Trustee for BWF Trust,Bango 999 Wind Farm,Wind,82.0,65.0,Bango 999 Wind Farm,-34.551582,148.732808,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,BLUFF1,0.0,AGL SA Generation Pty Limited,The Bluff Wind Farm,Wind,53.0,0.0,The Bluff Wind Farm,-33.367778,138.728611,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,BOCORWF1,98.42,Boco Rock Wind Farm Pty Ltd,Boco Rock Wind Farm,Wind,111.0,88.67,Boco Rock Wind Farm,-36.578611,149.103333,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,BRYB1WF1,106.54,Berrybank Development Pty Ltd,Berrybank Wind Farm,Wind,175.9,60.57,Berrybank Wind Farm,-37.94,143.52,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,BRYB2WF2,57.34,Berrybank 2 Asset Pty Ltd as trustee for Berrybank 2 Asset Trust,Berrybank 2 Wind Farm,Wind,105.0,54.61,Berrybank 2 Wind Farm,-37.94,143.52,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,BULGANA1,25.6,Bulgana Wind Farm Pty Ltd,Bulgana Green Power Hub,Wind,204.0,12.55,Bulgana Green Power Hub,-37.0975,142.973611,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,CATHROCK,6.4,Cathedral Rocks Wind Farm Pty Ltd,Cathedral Rocks,Wind,66.0,9.7,Cathedral Rocks,-34.51,135.35,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,CHYTWF1,26.72,Cherry Tree Wind Farm Pty Ltd as trustee for The Cherry Tree Project trust ,Cherry Tree Wind Farm,Wind,57.0,46.88,Cherry Tree Wind Farm,-37.1,145.26,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,CLEMGPWF,14.41,Pacific Hydro Clements Gap Pty Ltd,Clements Gap Wind Farm,Wind,57.0,25.28,Clements Gap Wind Farm,-33.48,138.1,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,CLRKCWF1,295.85,Stanwell Corporation Limited ,Clarke Creek Wind Farm,Wind,338.0,87.53,Clarke Creek Wind Farm,-22.85,149.45,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,CLRKCWF2,85.83,Stanwell Corporation Limited ,Clarke Creek Wind Farm,Wind,101.0,84.98,Clarke Creek Wind Farm,-22.85,149.45,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,CNUNDAWF,17.62,Canunda Power Pty Ltd,Canunda Wind Farm,Wind,46.0,38.3,Canunda Wind Farm,-37.73,140.39,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,COLWF01,117.69,Collector Wind Farm Pty Ltd,Collector Wind Farm 1,Wind,219.0,53.74,Collector Wind Farm 1,-34.8719,149.3967,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,COOPGWF1,198.5,PARF Company 10 Pty Limited as The Trustee for Coopers Gap Project Trust,Coopers Gap Wind Farm,Wind,440.0,45.11,Coopers Gap Wind Farm,-26.74,151.45,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,CROOKWF2,90.4,Crookwell Development Pty Ltd ,Crookwell 2 Wind Farm,Wind,91.0,99.34,Crookwell 2 Wind Farm,-34.52,149.54,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,CROOKWF3,55.1,Crookwell 3 Development Pty Ltd,Crookwell 3 Wind Farm,Wind,56.0,98.39,Crookwell 3 Wind Farm,-34.52,149.54,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,CROWLWF1,26.93,Pacific Hydro Crowlands Pty Ltd ,Crowlands Wind Farm,Wind,79.0,34.09,Crowlands Wind Farm,-37.13,143.16,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,CRURWF1,107.6,CRWF Nominees Pty Ltd As Trustee For The CRWF Trust,Crudine Ridge Wind Farm,Wind,138.0,77.97,Crudine Ridge Wind Farm,-32.97,149.64,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,CTHLWF1,135.8,Wild Cattle Hill Pty Ltd,Cattle Hill Wind Farm,Wind,144.0,94.31,Cattle Hill Wind Farm,-42.15,146.69,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,DULAWF1,99.4,Dulacca Energy Project Co Pty Ltd,Dulacca Wind Farm,Wind,173.0,57.46,Dulacca Wind Farm,-26.63,149.87,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,DUNDWF1,25.03,Dundonnell Wind Farm Pty Ltd,Dundonnell Wind Farm,Wind,168.0,14.9,Dundonnell Wind Farm,-37.52,142.58,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,DUNDWF2,4.84,Dundonnell Wind Farm Pty Ltd,Dundonnell Wind Farm,Wind,46.0,10.52,Dundonnell Wind Farm,-37.52,142.58,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,DUNDWF3,37.34,Dundonnell Wind Farm Pty Ltd,Dundonnell Wind Farm,Wind,122.0,30.61,Dundonnell Wind Farm,-37.52,142.58,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,ELAINWF1,11.9,Lal Lal Wind Farms Nom Co Pty Ltd,Elaine Wind Farm,Wind,82.0,14.51,Elaine Wind Farm,-37.36,144.0,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,FLYCRKWF,52.61,Iberdrola Australia Energy Markets Pty Limited,Flyers Creek Wind Farm,Wind,140.0,37.58,Flyers Creek Wind Farm,-33.365556,148.981944,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,GPWFEST1,84.33,Golden Plains WF1 Pty Ltd as Trustee for the Golden Plains WF1 Unit Trust,Golden Plains Wind Farm East,Wind,240.0,35.14,Golden Plains Wind Farm East,-37.945091,143.752614,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,GPWFEST2,32.79,Golden Plains WF1 Pty Ltd as Trustee for the Golden Plains WF1 Unit Trust,Golden Plains Wind Farm East,Wind,253.0,12.96,Golden Plains Wind Farm East,-37.945091,143.752614,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,GPWFEST3,49.99,Golden Plains WF1 Pty Ltd as Trustee for the Golden Plains WF1 Unit Trust,Golden Plains Wind Farm East,Wind,240.0,20.83,Golden Plains Wind Farm East,-37.945091,143.752614,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,GRANWF1,0.0,Granville Harbour Operations Pty Ltd as The Trustee for Granville Harbour Operations Trust,Granville Harbour Wind Farm,Wind,111.0,0.0,Granville Harbour Wind Farm,-41.8,145.06,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,GSWF1A,13.1,Goyder Wind Farm 1 Pty Ltd as the Trustee for Goyder Wind Farm 1 Trust,Goyder South Wind Farm 1A,Wind,201.0,6.52,Goyder South Wind Farm 1A,-33.679758,138.937597,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,GSWF1B1,1.91,Goyder Wind Farm 1B Pty Ltd as the Trustee for the Goyder Wind Farm 1B Trust,Goyder South Wind Farm 1B,Wind,196.0,0.97,Goyder South Wind Farm 1B,-33.679758,138.937597,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,GULLRWF1,124.36,New Gullen Range Wind Farm Pty Ltd,Gullen Range Wind Farm,Wind,161.0,77.24,Gullen Range Wind Farm,-34.34,149.27,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,GULLRWF2,91.08,New Gullen Range Wind Farm Pty Ltd,Gullen Range Wind Farm,Wind,107.0,85.12,Gullen Range Wind Farm,-34.34,149.27,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,GUNNING1,43.54,Gunning Wind Energy Developments Pty Ltd,Gunning Wind Farm,Wind,47.0,92.64,Gunning Wind Farm,-34.813333,149.4,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,HALLWF1,1.39,AGL SA Generation Pty Limited,Hallett 1 Wind Farm,Wind,95.0,1.46,Hallett 1 Wind Farm,-33.367778,138.728611,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,HALLWF2,0.06,AGL SA Generation Pty Limited,Hallett 2 Wind Farm,Wind,71.0,0.08,Hallett 2 Wind Farm,-33.367778,138.728611,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,HD1WF1,36.73,Hawkesdale Asset Pty Ltd as trustee for Hawkesdale Asset Trust,Hawkesdale Wind Farm,Wind,89.0,41.27,Hawkesdale Wind Farm,-38.147894,142.361381,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,HDWF1,5.9,HWF1 Pty Ltd,Hornsdale Wind Farm,Wind,102.0,5.78,Hornsdale Wind Farm,-33.050556,138.543611,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,HDWF2,1.7,HWF 2 Pty Ltd,Hornsdale Wind Farm 2,Wind,102.0,1.67,Hornsdale Wind Farm 2,-33.06,138.54,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,HDWF3,1.8,HWF3 Pty Ltd,Hornsdale Wind Farm 3,Wind,109.0,1.65,Hornsdale Wind Farm 3,-33.06,138.54,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,KABANWF1,4.95,Kaban Wind Farm Pty Ltd as trustee for Kaban Wind Farm Trust,Kaban Wind Farm,Wind,152.0,3.26,Kaban Wind Farm,-17.56,145.41,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,KEPWF1,0.0,Kennedy Energy Park Pty Ltd,Kennedy Energy Park,Wind,43.0,0.0,Kennedy Energy Park,-20.88,144.42,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,KIATAWF1,13.6,Kiata ProjectCo Pty Ltd Atf Kiata Project Trust,Kiata Wind Farm,Wind,31.0,43.87,Kiata Wind Farm,-36.4,141.75,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,LGAPWF1,30.22,Lincoln Gap Wind Farm (Operations) Pty Ltd,Lincoln Gap Wind Farm,Wind,123.0,24.57,Lincoln Gap Wind Farm,-32.564279,137.557328,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,LGAPWF1,30.22,Lincoln Gap Wind Farm (Operations) Pty Ltd,Lincoln Gap Wind Farm,Wind,123.0,24.57,Lincoln Gap Wind Farm,-32.564279,137.557328,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,LGAPWF2,32.86,Lincoln Gap Wind Farm (Operations) Pty Ltd,Lincoln Gap Wind Farm,Wind,85.0,38.66,Lincoln Gap Wind Farm,-32.564279,137.557328,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,LGAPWF2,32.86,Lincoln Gap Wind Farm (Operations) Pty Ltd,Lincoln Gap Wind Farm,Wind,85.0,38.66,Lincoln Gap Wind Farm,-32.564279,137.557328,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,LKBONNY1,14.83,Lake Bonney Wind Power Pty Ltd,Lake Bonney Wind Farm Stage 1,Wind,81.0,18.31,Lake Bonney Wind Farm Stage 1,-37.76,140.4,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,LKBONNY2,62.87,Lake Bonney Wind Power Pty Ltd,Lake Bonney Stage 2 Windfarm,Wind,159.0,39.54,Lake Bonney Stage 2 Windfarm,-37.76,140.4,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,LKBONNY3,12.95,Lake Bonney Wind Power Pty Ltd,Lake Bonney Stage 3 Wind Farm,Wind,39.0,33.21,Lake Bonney Stage 3 Wind Farm,-37.737781,140.388137,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,MACARTH1,60.2,AGL Hydro Partnership,Macarthur Wind Farm,Wind,420.0,14.33,Macarthur Wind Farm,-38.048957,142.192112,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,MCINTYR1,89.96,MacIntyre UJV Operator Pty Ltd,MacIntyre Wind Farm,Wind,890.0,10.11,MacIntyre Wind Farm,-28.32,151.54,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,MERCER01,40.7,Mt Mercer Windfarm Pty Ltd,Mt Mercer Wind Farm,Wind,131.0,31.07,Mt Mercer Wind Farm,-37.841111,143.871111,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,MEWF1,0.0,Ergon Energy Queensland Pty Ltd ,Mount Emerald Wind Farm,Wind,178.0,0.0,Mount Emerald Wind Farm,-17.133007,145.380644,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,MRTLSWF1,70.15,Mortlake South Wind Farm Pty Ltd,Mortlake South Wind Farm,Wind,153.0,45.85,Mortlake South Wind Farm,-38.127337,142.857801,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,MTGELWF1,51.88,Mt. Gellibrand Wind Farm Pty Ltd,Mt Gellibrand Wind Farm,Wind,132.0,39.3,Mt Gellibrand Wind Farm,-38.23,143.77,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,MTMILLAR,8.6,Mt Millar Wind Farm Pty Ltd,Mt Millar Wind Farm,Wind,70.0,12.29,Mt Millar Wind Farm,-33.624444,136.703611,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,MUSSELR1,149.5,Hydro-Electric Corporation,Musselroe Wind Farm,Wind,168.0,88.99,Musselroe Wind Farm,-40.780225,148.010799,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,MUWAWF1,72.49,Telstra Energy (Generation) Pty Ltd,Murra Warra Wind Farm,Wind,225.7,32.12,Murra Warra Wind Farm,-36.432404,142.317853,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,MUWAWF2,27.0,Murra Warra II Project Co Pty Ltd ATF The Murra Warra II Project Trust,Murra Warra Wind Farm Stage 2,Wind,203.0,13.3,Murra Warra Wind Farm Stage 2,-36.43,142.32,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,NBHWF1,1.1,AGL SA Generation Pty Limited,North Brown Hill Wind Farm,Wind,132.0,0.83,North Brown Hill Wind Farm,-33.367778,138.728611,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,OAKLAND1,13.7,AGL Hydro Partnership,Oaklands Hill Wind Farm,Wind,63.0,21.75,Oaklands Hill Wind Farm,-37.683078,142.551678,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,PAREPW1,54.13,Iberdrola Australia Energy Markets Pty Limited,Port Augusta Renewable Energy Park,Wind,201.0,26.93,Port Augusta Renewable Energy Park,-32.566944,137.856111,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,RYANCWF1,42.73,Ryan Corner Development Pty Ltd,Ryan Corner Wind Farm,Wind,205.0,20.84,Ryan Corner Wind Farm,-38.271017,142.140647,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,RYEPARK1,302.03,Rye Park Renewable Energy Pty Ltd as trustee for Rye Park Wind Farm Trust,Rye Park Renewable Energy,Wind,384.0,78.65,Rye Park Renewable Energy,-32.138333,148.972778,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,SALTCRK1,11.41,Salt Creek Wind Farm Pty Ltd,Salt Creek Wind Farm,Wind,54.0,21.13,Salt Creek Wind Farm,-37.95,142.63,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,SAPHWF1,14.92,The Trustee For The SWF1 Operations Trust,Sapphire Wind Farm,Wind,270.0,5.53,Sapphire Wind Farm,-29.7,151.41,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,SNOWNTH1,12.0,Snowtown Wind Farm Stage 2 Pty Ltd,Snowtown Wind Farm Stage 2 North,Wind,144.0,8.33,Snowtown Wind Farm Stage 2 North,-33.83,138.118611,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,SNOWSTH1,5.6,Snowtown Wind Farm Stage 2 Pty Ltd,Snowtown South Wind Farm,Wind,126.0,4.44,Snowtown South Wind Farm,-33.83,138.118611,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,SNOWTWN1,2.51,Snowtown Wind Farm Pty Ltd,Snowtown Wind Farm Units 1 And 47,Wind,99.0,2.54,Snowtown Wind Farm Units 1 And 47,-33.83,138.118611,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,STARHLWF,7.8,Starfish Hill Wind Farm Pty Ltd,Starfish Hill Wind Farm,Wind,35.0,22.29,Starfish Hill Wind Farm,-35.58,138.14,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,STOCKYD1,232.37,Stockyard Hill Wind Farm Pty Ltd,Stockyard Hill Wind Farm,Wind,511.0,45.47,Stockyard Hill Wind Farm,-37.535833,143.251389,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,STWF1,123.15,PARF Company 8 Pty Ltd as The Trustee for Silverton Project Trust,Silverton Wind Farm,Wind,198.0,62.2,Silverton Wind Farm,-37.683168,142.551678,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,TARALGA1,0.0,Taralga Wind Farm Nominees No 2 Pty Ltd (ATF Taralga Wind Farm Operating Trust),Taralga Wind Farm,Wind,106.0,0.0,Taralga Wind Farm,-34.42352,149.826267,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,WAMBOWF1,110.62,Stanwell Corporation Limited,Wambo Wind Farm 1,Wind,245.0,45.15,Wambo Wind Farm 1,-35.187301,149.524945,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,WATERLWF,0.0,Waterloo Wind Farm Pty Ltd,Waterloo Wind Farm,Wind,130.0,0.0,Waterloo Wind Farm,-34.00094,138.911567,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,WGWF1,0.0,Willogoleche Power Pty Ltd As The Trustee For The Willogoleche Operating Trust,Willogoleche Wind Farm,Wind,119.0,0.0,Willogoleche Wind Farm,-33.39,138.85,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,WOODLWN1,38.21,Woodlawn Wind Pty Ltd,Woodlawn Wind Farm,Wind,48.0,79.6,Woodlawn Wind Farm,-35.08,149.62,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,WPWF,1.68,AGL SA Generation Pty Limited,Wattle Point Wind Farm,Wind,91.0,1.85,Wattle Point Wind Farm,-35.111624,137.7219,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,WRWF1,15.82,White Rock Wind Farm Pty Ltd,White Rock Wind Farm,Wind,172.0,9.2,White Rock Wind Farm,-29.79,151.54,2026-02-17T19:15:06.507846
-2026/02/18 05:15:00,YENDWF1,45.68,Lal Lal Wind Farms Nom Co Pty Ltd,Yendon Wind Farm,Wind,142.0,32.17,Yendon Wind Farm,-37.629987,144.022717,2026-02-17T19:15:06.507846
+2026/02/18 06:00:00,CAPTL_WF,86.04,Iberdrola Australia Holdings Pty Limited,Capital Wind Farm,Wind,140.0,61.46,Capital Wind Farm,-35.1,149.31,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,CHALLHWF,5.8,Pacific Hydro Challicum Hills Pty Ltd,Challicum Hills Wind Farm,Wind,52.0,11.15,Challicum Hills Wind Farm,-37.38,143.11,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,CULLRGWF,27.0,Cullerin Range Wind Farm Pty Ltd,Cullerin Range Wind Farm,Wind,30.0,90.0,Cullerin Range Wind Farm,-34.81,149.4,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,DIAPURWF1,4.3,Y.E.S. Energy (SA) Pty Ltd,Diapur Wind Farm,Wind,7.0,61.43,Diapur Wind Farm,-36.3425,141.43,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,MLWF1,6.42,Mortons Lane Windfarm Pty Limited,Mortons Lane Wind Farm,Wind,20.0,32.1,Mortons Lane Wind Farm,-37.84,142.45,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,WAUBRAWF,109.68,Pyrenees Wind Energy Developments Pty Ltd,Waubra Wind Farm,Wind,192.0,57.12,Waubra Wind Farm,-37.394498,143.638982,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,WOOLNTH1,67.97,Hydro-Electric Corporation,Woolnorth Studland Bay / Bluff Point Wind Farm,Wind,140.0,48.55,Woolnorth Studland Bay / Bluff Point Wind Farm,-40.69,144.72,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,YAMBUKWF,5.0,Energy Pacific (Vic) Pty Ltd,Yambuk Wind Farm,Wind,30.0,16.67,Yambuk Wind Farm,-38.299083,142.027577,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,YSWF1,8.0,Pacific Hydro Yaloak South Pty Ltd,Yaloak South Wind Farm,Wind,28.0,28.57,Yaloak South Wind Farm,-37.7163,144.242853,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,ARWF1,44.3,Ararat Wind Farm Pty Ltd,Ararat Wind Farm,Wind,241.0,18.38,Ararat Wind Farm,-37.232778,143.031389,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,BALDHWF1,40.67,Alinta Energy Retail Sales Pty Ltd,Bald Hills Wind Farm,Wind,106.0,38.37,Bald Hills Wind Farm,-38.79,145.93,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,BANGOWF1,60.7,BWF Nominees Pty Ltd as The Trustee for BWF Trust,Bango 973 Wind Farm,Wind,155.0,39.16,Bango 973 Wind Farm,-34.551582,148.732808,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,BANGOWF2,55.1,BWF Nominees Pty Ltd as The Trustee for BWF Trust,Bango 999 Wind Farm,Wind,82.0,67.2,Bango 999 Wind Farm,-34.551582,148.732808,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,BLUFF1,0.0,AGL SA Generation Pty Limited,The Bluff Wind Farm,Wind,53.0,0.0,The Bluff Wind Farm,-33.367778,138.728611,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,BOCORWF1,99.77,Boco Rock Wind Farm Pty Ltd,Boco Rock Wind Farm,Wind,111.0,89.88,Boco Rock Wind Farm,-36.578611,149.103333,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,BRYB1WF1,84.2,Berrybank Development Pty Ltd,Berrybank Wind Farm,Wind,175.9,47.87,Berrybank Wind Farm,-37.94,143.52,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,BRYB2WF2,50.77,Berrybank 2 Asset Pty Ltd as trustee for Berrybank 2 Asset Trust,Berrybank 2 Wind Farm,Wind,105.0,48.35,Berrybank 2 Wind Farm,-37.94,143.52,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,BULGANA1,21.88,Bulgana Wind Farm Pty Ltd,Bulgana Green Power Hub,Wind,204.0,10.73,Bulgana Green Power Hub,-37.0975,142.973611,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,CATHROCK,6.2,Cathedral Rocks Wind Farm Pty Ltd,Cathedral Rocks,Wind,66.0,9.39,Cathedral Rocks,-34.51,135.35,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,CHYTWF1,21.94,Cherry Tree Wind Farm Pty Ltd as trustee for The Cherry Tree Project trust ,Cherry Tree Wind Farm,Wind,57.0,38.49,Cherry Tree Wind Farm,-37.1,145.26,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,CLEMGPWF,4.9,Pacific Hydro Clements Gap Pty Ltd,Clements Gap Wind Farm,Wind,57.0,8.6,Clements Gap Wind Farm,-33.48,138.1,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,CLRKCWF1,299.45,Stanwell Corporation Limited ,Clarke Creek Wind Farm,Wind,338.0,88.59,Clarke Creek Wind Farm,-22.85,149.45,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,CLRKCWF2,0.0,Stanwell Corporation Limited ,Clarke Creek Wind Farm,Wind,101.0,0.0,Clarke Creek Wind Farm,-22.85,149.45,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,CNUNDAWF,17.22,Canunda Power Pty Ltd,Canunda Wind Farm,Wind,46.0,37.43,Canunda Wind Farm,-37.73,140.39,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,COLWF01,98.16,Collector Wind Farm Pty Ltd,Collector Wind Farm 1,Wind,219.0,44.82,Collector Wind Farm 1,-34.8719,149.3967,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,COOPGWF1,183.04,PARF Company 10 Pty Limited as The Trustee for Coopers Gap Project Trust,Coopers Gap Wind Farm,Wind,440.0,41.6,Coopers Gap Wind Farm,-26.74,151.45,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,CROOKWF2,90.76,Crookwell Development Pty Ltd ,Crookwell 2 Wind Farm,Wind,91.0,99.74,Crookwell 2 Wind Farm,-34.52,149.54,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,CROOKWF3,54.46,Crookwell 3 Development Pty Ltd,Crookwell 3 Wind Farm,Wind,56.0,97.25,Crookwell 3 Wind Farm,-34.52,149.54,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,CROWLWF1,21.32,Pacific Hydro Crowlands Pty Ltd ,Crowlands Wind Farm,Wind,79.0,26.99,Crowlands Wind Farm,-37.13,143.16,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,CRURWF1,124.9,CRWF Nominees Pty Ltd As Trustee For The CRWF Trust,Crudine Ridge Wind Farm,Wind,138.0,90.51,Crudine Ridge Wind Farm,-32.97,149.64,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,CTHLWF1,83.0,Wild Cattle Hill Pty Ltd,Cattle Hill Wind Farm,Wind,144.0,57.64,Cattle Hill Wind Farm,-42.15,146.69,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,DULAWF1,77.3,Dulacca Energy Project Co Pty Ltd,Dulacca Wind Farm,Wind,173.0,44.68,Dulacca Wind Farm,-26.63,149.87,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,DUNDWF1,42.62,Dundonnell Wind Farm Pty Ltd,Dundonnell Wind Farm,Wind,168.0,25.37,Dundonnell Wind Farm,-37.52,142.58,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,DUNDWF2,9.06,Dundonnell Wind Farm Pty Ltd,Dundonnell Wind Farm,Wind,46.0,19.7,Dundonnell Wind Farm,-37.52,142.58,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,DUNDWF3,59.7,Dundonnell Wind Farm Pty Ltd,Dundonnell Wind Farm,Wind,122.0,48.93,Dundonnell Wind Farm,-37.52,142.58,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,ELAINWF1,11.82,Lal Lal Wind Farms Nom Co Pty Ltd,Elaine Wind Farm,Wind,82.0,14.41,Elaine Wind Farm,-37.36,144.0,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,FLYCRKWF,42.82,Iberdrola Australia Energy Markets Pty Limited,Flyers Creek Wind Farm,Wind,140.0,30.59,Flyers Creek Wind Farm,-33.365556,148.981944,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,GPWFEST1,91.04,Golden Plains WF1 Pty Ltd as Trustee for the Golden Plains WF1 Unit Trust,Golden Plains Wind Farm East,Wind,240.0,37.93,Golden Plains Wind Farm East,-37.945091,143.752614,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,GPWFEST2,35.31,Golden Plains WF1 Pty Ltd as Trustee for the Golden Plains WF1 Unit Trust,Golden Plains Wind Farm East,Wind,253.0,13.96,Golden Plains Wind Farm East,-37.945091,143.752614,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,GPWFEST3,54.2,Golden Plains WF1 Pty Ltd as Trustee for the Golden Plains WF1 Unit Trust,Golden Plains Wind Farm East,Wind,240.0,22.58,Golden Plains Wind Farm East,-37.945091,143.752614,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,GRANWF1,0.0,Granville Harbour Operations Pty Ltd as The Trustee for Granville Harbour Operations Trust,Granville Harbour Wind Farm,Wind,111.0,0.0,Granville Harbour Wind Farm,-41.8,145.06,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,GSWF1A,22.12,Goyder Wind Farm 1 Pty Ltd as the Trustee for Goyder Wind Farm 1 Trust,Goyder South Wind Farm 1A,Wind,201.0,11.0,Goyder South Wind Farm 1A,-33.679758,138.937597,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,GSWF1B1,3.91,Goyder Wind Farm 1B Pty Ltd as the Trustee for the Goyder Wind Farm 1B Trust,Goyder South Wind Farm 1B,Wind,196.0,1.99,Goyder South Wind Farm 1B,-33.679758,138.937597,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,GULLRWF1,116.09,New Gullen Range Wind Farm Pty Ltd,Gullen Range Wind Farm,Wind,161.0,72.11,Gullen Range Wind Farm,-34.34,149.27,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,GULLRWF2,84.53,New Gullen Range Wind Farm Pty Ltd,Gullen Range Wind Farm,Wind,107.0,79.0,Gullen Range Wind Farm,-34.34,149.27,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,GUNNING1,42.28,Gunning Wind Energy Developments Pty Ltd,Gunning Wind Farm,Wind,47.0,89.96,Gunning Wind Farm,-34.813333,149.4,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,HALLWF1,2.24,AGL SA Generation Pty Limited,Hallett 1 Wind Farm,Wind,95.0,2.36,Hallett 1 Wind Farm,-33.367778,138.728611,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,HALLWF2,0.0,AGL SA Generation Pty Limited,Hallett 2 Wind Farm,Wind,71.0,0.0,Hallett 2 Wind Farm,-33.367778,138.728611,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,HD1WF1,34.03,Hawkesdale Asset Pty Ltd as trustee for Hawkesdale Asset Trust,Hawkesdale Wind Farm,Wind,89.0,38.24,Hawkesdale Wind Farm,-38.147894,142.361381,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,HDWF1,9.5,HWF1 Pty Ltd,Hornsdale Wind Farm,Wind,102.0,9.31,Hornsdale Wind Farm,-33.050556,138.543611,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,HDWF2,2.2,HWF 2 Pty Ltd,Hornsdale Wind Farm 2,Wind,102.0,2.16,Hornsdale Wind Farm 2,-33.06,138.54,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,HDWF3,5.3,HWF3 Pty Ltd,Hornsdale Wind Farm 3,Wind,109.0,4.86,Hornsdale Wind Farm 3,-33.06,138.54,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,KABANWF1,1.2,Kaban Wind Farm Pty Ltd as trustee for Kaban Wind Farm Trust,Kaban Wind Farm,Wind,152.0,0.79,Kaban Wind Farm,-17.56,145.41,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,KEPWF1,0.0,Kennedy Energy Park Pty Ltd,Kennedy Energy Park,Wind,43.0,0.0,Kennedy Energy Park,-20.88,144.42,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,KIATAWF1,9.5,Kiata ProjectCo Pty Ltd Atf Kiata Project Trust,Kiata Wind Farm,Wind,31.0,30.65,Kiata Wind Farm,-36.4,141.75,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,LGAPWF1,33.4,Lincoln Gap Wind Farm (Operations) Pty Ltd,Lincoln Gap Wind Farm,Wind,123.0,27.15,Lincoln Gap Wind Farm,-32.564279,137.557328,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,LGAPWF1,33.4,Lincoln Gap Wind Farm (Operations) Pty Ltd,Lincoln Gap Wind Farm,Wind,123.0,27.15,Lincoln Gap Wind Farm,-32.564279,137.557328,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,LGAPWF2,30.58,Lincoln Gap Wind Farm (Operations) Pty Ltd,Lincoln Gap Wind Farm,Wind,85.0,35.98,Lincoln Gap Wind Farm,-32.564279,137.557328,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,LGAPWF2,30.58,Lincoln Gap Wind Farm (Operations) Pty Ltd,Lincoln Gap Wind Farm,Wind,85.0,35.98,Lincoln Gap Wind Farm,-32.564279,137.557328,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,LKBONNY1,15.63,Lake Bonney Wind Power Pty Ltd,Lake Bonney Wind Farm Stage 1,Wind,81.0,19.3,Lake Bonney Wind Farm Stage 1,-37.76,140.4,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,LKBONNY2,53.14,Lake Bonney Wind Power Pty Ltd,Lake Bonney Stage 2 Windfarm,Wind,159.0,33.42,Lake Bonney Stage 2 Windfarm,-37.76,140.4,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,LKBONNY3,9.27,Lake Bonney Wind Power Pty Ltd,Lake Bonney Stage 3 Wind Farm,Wind,39.0,23.77,Lake Bonney Stage 3 Wind Farm,-37.737781,140.388137,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,MACARTH1,68.5,AGL Hydro Partnership,Macarthur Wind Farm,Wind,420.0,16.31,Macarthur Wind Farm,-38.048957,142.192112,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,MCINTYR1,51.25,MacIntyre UJV Operator Pty Ltd,MacIntyre Wind Farm,Wind,890.0,5.76,MacIntyre Wind Farm,-28.32,151.54,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,MERCER01,42.4,Mt Mercer Windfarm Pty Ltd,Mt Mercer Wind Farm,Wind,131.0,32.37,Mt Mercer Wind Farm,-37.841111,143.871111,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,MEWF1,0.0,Ergon Energy Queensland Pty Ltd ,Mount Emerald Wind Farm,Wind,178.0,0.0,Mount Emerald Wind Farm,-17.133007,145.380644,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,MRTLSWF1,56.94,Mortlake South Wind Farm Pty Ltd,Mortlake South Wind Farm,Wind,153.0,37.22,Mortlake South Wind Farm,-38.127337,142.857801,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,MTGELWF1,62.66,Mt. Gellibrand Wind Farm Pty Ltd,Mt Gellibrand Wind Farm,Wind,132.0,47.47,Mt Gellibrand Wind Farm,-38.23,143.77,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,MTMILLAR,9.1,Mt Millar Wind Farm Pty Ltd,Mt Millar Wind Farm,Wind,70.0,13.0,Mt Millar Wind Farm,-33.624444,136.703611,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,MUSSELR1,129.7,Hydro-Electric Corporation,Musselroe Wind Farm,Wind,168.0,77.2,Musselroe Wind Farm,-40.780225,148.010799,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,MUWAWF1,50.82,Telstra Energy (Generation) Pty Ltd,Murra Warra Wind Farm,Wind,225.7,22.52,Murra Warra Wind Farm,-36.432404,142.317853,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,MUWAWF2,18.5,Murra Warra II Project Co Pty Ltd ATF The Murra Warra II Project Trust,Murra Warra Wind Farm Stage 2,Wind,203.0,9.11,Murra Warra Wind Farm Stage 2,-36.43,142.32,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,NBHWF1,1.3,AGL SA Generation Pty Limited,North Brown Hill Wind Farm,Wind,132.0,0.98,North Brown Hill Wind Farm,-33.367778,138.728611,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,OAKLAND1,17.6,AGL Hydro Partnership,Oaklands Hill Wind Farm,Wind,63.0,27.94,Oaklands Hill Wind Farm,-37.683078,142.551678,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,PAREPW1,42.74,Iberdrola Australia Energy Markets Pty Limited,Port Augusta Renewable Energy Park,Wind,201.0,21.26,Port Augusta Renewable Energy Park,-32.566944,137.856111,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,RYANCWF1,52.64,Ryan Corner Development Pty Ltd,Ryan Corner Wind Farm,Wind,205.0,25.68,Ryan Corner Wind Farm,-38.271017,142.140647,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,RYEPARK1,264.17,Rye Park Renewable Energy Pty Ltd as trustee for Rye Park Wind Farm Trust,Rye Park Renewable Energy,Wind,384.0,68.79,Rye Park Renewable Energy,-32.138333,148.972778,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,SALTCRK1,14.92,Salt Creek Wind Farm Pty Ltd,Salt Creek Wind Farm,Wind,54.0,27.63,Salt Creek Wind Farm,-37.95,142.63,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,SAPHWF1,13.25,The Trustee For The SWF1 Operations Trust,Sapphire Wind Farm,Wind,270.0,4.91,Sapphire Wind Farm,-29.7,151.41,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,SNOWNTH1,12.2,Snowtown Wind Farm Stage 2 Pty Ltd,Snowtown Wind Farm Stage 2 North,Wind,144.0,8.47,Snowtown Wind Farm Stage 2 North,-33.83,138.118611,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,SNOWSTH1,7.7,Snowtown Wind Farm Stage 2 Pty Ltd,Snowtown South Wind Farm,Wind,126.0,6.11,Snowtown South Wind Farm,-33.83,138.118611,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,SNOWTWN1,1.71,Snowtown Wind Farm Pty Ltd,Snowtown Wind Farm Units 1 And 47,Wind,99.0,1.73,Snowtown Wind Farm Units 1 And 47,-33.83,138.118611,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,STARHLWF,4.2,Starfish Hill Wind Farm Pty Ltd,Starfish Hill Wind Farm,Wind,35.0,12.0,Starfish Hill Wind Farm,-35.58,138.14,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,STOCKYD1,180.45,Stockyard Hill Wind Farm Pty Ltd,Stockyard Hill Wind Farm,Wind,511.0,35.31,Stockyard Hill Wind Farm,-37.535833,143.251389,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,STWF1,122.33,PARF Company 8 Pty Ltd as The Trustee for Silverton Project Trust,Silverton Wind Farm,Wind,198.0,61.78,Silverton Wind Farm,-37.683168,142.551678,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,TARALGA1,0.0,Taralga Wind Farm Nominees No 2 Pty Ltd (ATF Taralga Wind Farm Operating Trust),Taralga Wind Farm,Wind,106.0,0.0,Taralga Wind Farm,-34.42352,149.826267,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,WAMBOWF1,106.37,Stanwell Corporation Limited,Wambo Wind Farm 1,Wind,245.0,43.42,Wambo Wind Farm 1,-35.187301,149.524945,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,WATERLWF,5.2,Waterloo Wind Farm Pty Ltd,Waterloo Wind Farm,Wind,130.0,4.0,Waterloo Wind Farm,-34.00094,138.911567,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,WGWF1,0.0,Willogoleche Power Pty Ltd As The Trustee For The Willogoleche Operating Trust,Willogoleche Wind Farm,Wind,119.0,0.0,Willogoleche Wind Farm,-33.39,138.85,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,WOODLWN1,36.07,Woodlawn Wind Pty Ltd,Woodlawn Wind Farm,Wind,48.0,75.15,Woodlawn Wind Farm,-35.08,149.62,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,WPWF,0.35,AGL SA Generation Pty Limited,Wattle Point Wind Farm,Wind,91.0,0.38,Wattle Point Wind Farm,-35.111624,137.7219,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,WRWF1,20.69,White Rock Wind Farm Pty Ltd,White Rock Wind Farm,Wind,172.0,12.03,White Rock Wind Farm,-29.79,151.54,2026-02-17T19:57:23.930261
+2026/02/18 06:00:00,YENDWF1,50.45,Lal Lal Wind Farms Nom Co Pty Ltd,Yendon Wind Farm,Wind,142.0,35.53,Yendon Wind Farm,-37.629987,144.022717,2026-02-17T19:57:23.930261
